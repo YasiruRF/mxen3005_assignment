@@ -24,7 +24,7 @@ class PickAndPlaceNode(Node):
 
     def __init__(self):
         super().__init__("pick_and_place_node")
-        self.dobot = DobotClient()
+        self.dobot = None
 
         self.service = self.create_service(
             PickAndPlace,
@@ -65,6 +65,8 @@ class PickAndPlaceNode(Node):
                 f"Starting pick-and-place: "
                 f"pick=({px},{py},{pz},{pr})  place=({dx},{dy},{dz},{dr})"
             )
+            
+            self.dobot = DobotClient()
 
             self.get_logger().info("Starting")
             self.dobot.set_joint_ptp(0, 0, 0, 0)
