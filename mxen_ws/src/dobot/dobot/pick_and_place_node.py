@@ -1,6 +1,8 @@
+from urllib import response
+
 import rclpy
 from rclpy.node import Node
-from dobot_client import DobotClient
+from .dobot_client import DobotClient
 
 from .dobot_kinematics import forward_kinematics, inverse_kinematics
 from dobot_interface.srv import PickAndPlace  # custom service interface
@@ -39,6 +41,7 @@ class PickAndPlaceNode(Node):
         return theta1, theta2, theta3, theta4
     
     def goal_valid(self, x, y, z, r):
+        self.dobot = DobotClient()
         theta1, theta2, theta3, theta4 = self.pose_to_joints(x, y, z, r)
         return self.dobot.is_goal_valid(theta1, theta2, theta3, theta4)
 
@@ -100,6 +103,9 @@ class PickAndPlaceNode(Node):
 
             self.get_logger().info("Move 7")
             self.dobot.set_joint_ptp(0, 0, 0, 0)
+
+            response.success = True
+            response.message = "Pick-and-place completed successfully"
 
         except Exception as e:
             self.dobot = None
