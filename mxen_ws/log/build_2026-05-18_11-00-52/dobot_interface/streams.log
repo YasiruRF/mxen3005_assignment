@@ -1,0 +1,227 @@
+[0.436s] Invoking command in '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/kilted /usr/bin/cmake --build /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot_interface -- -j16 -l16
+[2.640s] [  1%] Built target dobot_interface__rosidl_generator_type_description
+[2.879s] [  3%] Built target dobot_interface__rs
+[3.403s] [  5%] Built target dobot_interface__cpp
+[4.614s] [ 25%] Built target dobot_interface__rosidl_generator_c
+[5.002s] [ 25%] Built target ament_cmake_python_copy_dobot_interface
+[5.225s] [ 34%] Built target dobot_interface__rosidl_typesupport_c
+[5.329s] [ 43%] Built target dobot_interface__rosidl_typesupport_cpp
+[5.368s] [ 52%] Built target dobot_interface__rosidl_typesupport_introspection_c
+[5.416s] running egg_info
+[5.425s] [ 63%] Built target dobot_interface__rosidl_typesupport_introspection_cpp
+[5.436s] writing dobot_interface.egg-info/PKG-INFO
+[5.447s] writing dependency_links to dobot_interface.egg-info/dependency_links.txt
+[5.457s] [ 70%] Built target dobot_interface__rosidl_typesupport_fastrtps_c
+[5.459s] writing top-level names to dobot_interface.egg-info/top_level.txt
+[5.523s] [ 80%] Built target dobot_interface__rosidl_typesupport_fastrtps_cpp
+[5.621s] reading manifest file 'dobot_interface.egg-info/SOURCES.txt'
+[5.662s] [ 80%] Built target dobot_interface
+[5.732s] writing manifest file 'dobot_interface.egg-info/SOURCES.txt'
+[5.775s] [ 80%] Built target ament_cmake_python_build_dobot_interface_egg
+[6.078s] [ 81%] Built target dobot_interface__py
+[6.735s] [ 89%] Built target dobot_interface__rosidl_generator_py
+[7.140s] [100%] Built target dobot_interface_s__rosidl_typesupport_c
+[7.141s] [100%] Built target dobot_interface_s__rosidl_typesupport_fastrtps_c
+[7.142s] [100%] Built target dobot_interface_s__rosidl_typesupport_introspection_c
+[7.942s] Invoked command in '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/kilted /usr/bin/cmake --build /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot_interface -- -j16 -l16
+[8.042s] Invoking command in '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/kilted /usr/bin/cmake --install /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot_interface
+[8.066s] -- Install configuration: ""
+[8.151s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/ament_index/resource_index/rosidl_interfaces/dobot_interface
+[8.332s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/action/JointPTP.json
+[8.380s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/action/PosePTP.json
+[8.431s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/srv/PickAndPlace.json
+[8.461s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface
+[8.589s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action
+[8.724s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail
+[8.844s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/joint_ptp__description.c
+[9.024s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/joint_ptp__functions.c
+[9.143s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/joint_ptp__functions.h
+[9.253s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/joint_ptp__struct.h
+[9.402s] -- Installing: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/joint_ptp__type_support.c
+[9.628s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/joint_ptp__type_support.h
+[9.690s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/pose_ptp__description.c
+[9.799s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/pose_ptp__functions.c
+[9.975s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/pose_ptp__functions.h
+[10.157s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/pose_ptp__struct.h
+[10.259s] -- Installing: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/pose_ptp__type_support.c
+[10.873s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/pose_ptp__type_support.h
+[11.084s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/joint_ptp.h
+[11.241s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/pose_ptp.h
+[11.435s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/msg
+[11.561s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/msg/rosidl_generator_c__visibility_control.h
+[11.637s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv
+[11.774s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail
+[11.856s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/pick_and_place__description.c
+[11.923s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/pick_and_place__functions.c
+[12.033s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/pick_and_place__functions.h
+[12.177s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/pick_and_place__struct.h
+[12.354s] -- Installing: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/pick_and_place__type_support.c
+[12.777s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/pick_and_place__type_support.h
+[12.866s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/pick_and_place.h
+[12.942s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/environment/library_path.sh
+[13.027s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/environment/library_path.dsv
+[13.261s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/libdobot_interface__rosidl_generator_c.so
+[13.648s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface
+[13.761s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action
+[13.933s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail
+[14.335s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/joint_ptp__rosidl_typesupport_fastrtps_c.h
+[14.523s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/pose_ptp__rosidl_typesupport_fastrtps_c.h
+[14.697s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/msg
+[15.023s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[15.186s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv
+[15.519s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail
+[15.869s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/pick_and_place__rosidl_typesupport_fastrtps_c.h
+[16.248s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/libdobot_interface__rosidl_typesupport_fastrtps_c.so
+[16.689s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface
+[16.930s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action
+[17.257s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail
+[17.595s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/joint_ptp__rosidl_typesupport_introspection_c.h
+[17.973s] -- Installing: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/joint_ptp__type_support.c
+[18.764s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/pose_ptp__rosidl_typesupport_introspection_c.h
+[18.874s] -- Installing: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/pose_ptp__type_support.c
+[19.122s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/msg
+[19.239s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[19.293s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv
+[19.433s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail
+[19.728s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/pick_and_place__rosidl_typesupport_introspection_c.h
+[19.802s] -- Installing: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/pick_and_place__type_support.c
+[20.398s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/libdobot_interface__rosidl_typesupport_introspection_c.so
+[20.696s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/libdobot_interface__rosidl_typesupport_c.so
+[20.835s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface
+[20.944s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action
+[21.059s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail
+[21.206s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/joint_ptp__builder.hpp
+[21.340s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/joint_ptp__struct.hpp
+[21.634s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/joint_ptp__traits.hpp
+[21.805s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/joint_ptp__type_support.hpp
+[21.886s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/pose_ptp__builder.hpp
+[21.994s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/pose_ptp__struct.hpp
+[22.077s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/pose_ptp__traits.hpp
+[22.203s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/pose_ptp__type_support.hpp
+[22.288s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/joint_ptp.hpp
+[22.389s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/pose_ptp.hpp
+[22.455s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/msg
+[22.517s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/msg/rosidl_generator_cpp__visibility_control.hpp
+[22.557s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv
+[22.628s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail
+[22.733s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/pick_and_place__builder.hpp
+[22.811s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/pick_and_place__struct.hpp
+[22.933s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/pick_and_place__traits.hpp
+[23.028s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/pick_and_place__type_support.hpp
+[23.116s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/pick_and_place.hpp
+[23.174s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface
+[23.249s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action
+[23.395s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail
+[23.552s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/dds_fastrtps
+[23.732s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/joint_ptp__rosidl_typesupport_fastrtps_cpp.hpp
+[23.818s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/pose_ptp__rosidl_typesupport_fastrtps_cpp.hpp
+[23.907s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/msg
+[24.085s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[24.149s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv
+[24.349s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail
+[24.575s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/dds_fastrtps
+[24.989s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/pick_and_place__rosidl_typesupport_fastrtps_cpp.hpp
+[25.286s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/libdobot_interface__rosidl_typesupport_fastrtps_cpp.so
+[25.579s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface
+[25.628s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action
+[25.727s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail
+[25.887s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/joint_ptp__rosidl_typesupport_introspection_cpp.hpp
+[26.023s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/joint_ptp__type_support.cpp
+[26.197s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/pose_ptp__rosidl_typesupport_introspection_cpp.hpp
+[26.316s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/pose_ptp__type_support.cpp
+[26.348s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv
+[26.464s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail
+[26.666s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/pick_and_place__rosidl_typesupport_introspection_cpp.hpp
+[26.850s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/pick_and_place__type_support.cpp
+[27.292s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/libdobot_interface__rosidl_typesupport_introspection_cpp.so
+[27.681s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/libdobot_interface__rosidl_typesupport_cpp.so
+[27.773s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/environment/pythonpath.sh
+[27.916s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/environment/pythonpath.dsv
+[28.045s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface-0.0.0-py3.12.egg-info
+[28.176s] -- Installing: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface-0.0.0-py3.12.egg-info/dependency_links.txt
+[28.620s] -- Installing: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface-0.0.0-py3.12.egg-info/PKG-INFO
+[29.066s] -- Installing: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface-0.0.0-py3.12.egg-info/SOURCES.txt
+[29.317s] -- Installing: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface-0.0.0-py3.12.egg-info/top_level.txt
+[29.493s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface
+[29.594s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/action
+[29.800s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/action/_joint_ptp.py
+[29.872s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/action/_joint_ptp_s.c
+[29.942s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/action/_pose_ptp.py
+[30.015s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/action/_pose_ptp_s.c
+[30.118s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/action/__init__.py
+[30.229s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/dobot_interface_s__rosidl_typesupport_c.so
+[30.273s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/dobot_interface_s__rosidl_typesupport_fastrtps_c.so
+[30.358s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/dobot_interface_s__rosidl_typesupport_introspection_c.so
+[30.485s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/srv
+[30.615s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/srv/_pick_and_place.py
+[30.697s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/srv/_pick_and_place_s.c
+[30.740s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/srv/__init__.py
+[30.786s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/_dobot_interface_s.ep.rosidl_typesupport_c.c
+[30.849s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/_dobot_interface_s.ep.rosidl_typesupport_fastrtps_c.c
+[30.907s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/_dobot_interface_s.ep.rosidl_typesupport_introspection_c.c
+[31.026s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/__init__.py
+[31.691s] Listing '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface'...
+[31.697s] Listing '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/action'...
+[31.706s] Listing '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/srv'...
+[32.178s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/dobot_interface_s__rosidl_typesupport_fastrtps_c.so
+[32.729s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/dobot_interface_s__rosidl_typesupport_introspection_c.so
+[33.605s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/dobot_interface_s__rosidl_typesupport_c.so
+[34.470s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/libdobot_interface__rosidl_generator_py.so
+[35.040s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/ament_index/resource_index/rust_packages/dobot_interface
+[35.132s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/rust
+[35.157s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/rust/build.rs
+[35.176s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/rust/Cargo.toml
+[35.191s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/rust/src
+[35.403s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/rust/src/action
+[35.737s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/rust/src/action/rmw.rs
+[35.950s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/rust/src/action.rs
+[36.132s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/rust/src/lib.rs
+[36.482s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/rust/src/srv
+[37.027s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/rust/src/srv/rmw.rs
+[37.415s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/rust/src/srv.rs
+[37.799s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/action/JointPTP.idl
+[38.192s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/action/PosePTP.idl
+[38.642s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/srv/PickAndPlace.idl
+[38.971s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/action/JointPTP.action
+[39.224s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/action/PosePTP.action
+[39.345s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/srv/PickAndPlace.srv
+[39.764s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/ament_index/resource_index/package_run_dependencies/dobot_interface
+[40.065s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/ament_index/resource_index/parent_prefix_path/dobot_interface
+[40.394s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/environment/ament_prefix_path.sh
+[40.647s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/environment/ament_prefix_path.dsv
+[40.796s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/environment/path.sh
+[41.037s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/environment/path.dsv
+[41.338s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/local_setup.bash
+[41.538s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/local_setup.sh
+[41.599s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/local_setup.zsh
+[41.696s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/local_setup.dsv
+[41.795s] -- Installing: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/package.dsv
+[42.461s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/ament_index/resource_index/packages/dobot_interface
+[43.032s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/export_dobot_interface__rosidl_generator_cExport.cmake
+[43.274s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/export_dobot_interface__rosidl_generator_cExport-noconfig.cmake
+[43.730s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/export_dobot_interface__rosidl_typesupport_fastrtps_cExport.cmake
+[43.953s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/export_dobot_interface__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[44.499s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/dobot_interface__rosidl_typesupport_introspection_cExport.cmake
+[44.836s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/dobot_interface__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[45.062s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/dobot_interface__rosidl_typesupport_cExport.cmake
+[45.313s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/dobot_interface__rosidl_typesupport_cExport-noconfig.cmake
+[45.614s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/export_dobot_interface__rosidl_generator_cppExport.cmake
+[45.820s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/export_dobot_interface__rosidl_typesupport_fastrtps_cppExport.cmake
+[46.113s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/export_dobot_interface__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[46.382s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/dobot_interface__rosidl_typesupport_introspection_cppExport.cmake
+[46.441s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/dobot_interface__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[46.526s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/dobot_interface__rosidl_typesupport_cppExport.cmake
+[46.612s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/dobot_interface__rosidl_typesupport_cppExport-noconfig.cmake
+[46.975s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/export_dobot_interface__rosidl_generator_pyExport.cmake
+[47.165s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/export_dobot_interface__rosidl_generator_pyExport-noconfig.cmake
+[47.277s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/rosidl_cmake-extras.cmake
+[47.380s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/ament_cmake_export_dependencies-extras.cmake
+[47.438s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/ament_cmake_export_include_directories-extras.cmake
+[47.525s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/ament_cmake_export_libraries-extras.cmake
+[47.742s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/ament_cmake_export_targets-extras.cmake
+[47.937s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[48.130s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[48.441s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/dobot_interfaceConfig.cmake
+[48.647s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/dobot_interfaceConfig-version.cmake
+[48.911s] -- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/package.xml
+[48.960s] Invoked command in '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/kilted /usr/bin/cmake --install /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot_interface

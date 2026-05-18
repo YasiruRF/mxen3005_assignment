@@ -16,6 +16,8 @@ dobot/dobot_kinematics.py
 dobot/homing_node.py
 dobot/joint_ptp_node.py
 dobot/joint_state_node.py
+dobot/keyboard.py
+dobot/keyboard_node.py
 dobot/pick_and_place_node.py
 dobot/py.typed
 dobot/suction_cup_node.py

@@ -14,7 +14,7 @@ class Homingnode(Node):
 
     def service_callback(self, request, response):
         try:
-            self.dobot = DobotClient
+            self.dobot = DobotClient()
             self.get_logger().info("Starting homing procedure")
             self.dobot.start_homing()
             response.success = True

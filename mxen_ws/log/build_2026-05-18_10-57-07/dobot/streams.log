@@ -1,0 +1,34 @@
+[9.665s] Invoking command in '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/src/dobot': AMENT_PREFIX_PATH=/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib:${LD_LIBRARY_PATH} PYTHONPATH=/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages:/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/dobot build --build-base /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build install --record /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/install.log --single-version-externally-managed install_data
+[13.111s] running egg_info
+[13.159s] writing ../../build/dobot/dobot.egg-info/PKG-INFO
+[13.176s] writing dependency_links to ../../build/dobot/dobot.egg-info/dependency_links.txt
+[13.185s] writing entry points to ../../build/dobot/dobot.egg-info/entry_points.txt
+[13.202s] writing requirements to ../../build/dobot/dobot.egg-info/requires.txt
+[13.209s] writing top-level names to ../../build/dobot/dobot.egg-info/top_level.txt
+[13.465s] reading manifest file '../../build/dobot/dobot.egg-info/SOURCES.txt'
+[13.754s] adding license file 'LICENSE'
+[13.868s] writing manifest file '../../build/dobot/dobot.egg-info/SOURCES.txt'
+[13.884s] running build
+[13.888s] running build_py
+[14.233s] copying dobot/keyboard.py -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build/lib/dobot
+[14.354s] copying dobot/keyboard_node.py -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build/lib/dobot
+[14.648s] running install
+[14.665s] running install_lib
+[15.061s] copying /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build/lib/dobot/keyboard.py -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages/dobot
+[15.124s] copying /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build/lib/dobot/keyboard_node.py -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages/dobot
+[15.655s] byte-compiling /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages/dobot/keyboard.py to keyboard.cpython-312.pyc
+[15.779s] byte-compiling /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages/dobot/keyboard_node.py to keyboard_node.cpython-312.pyc
+[15.909s] running install_data
+[16.022s] running install_egg_info
+[16.086s] removing '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages/dobot-0.0.0-py3.12.egg-info' (and everything under it)
+[16.299s] Copying ../../build/dobot/dobot.egg-info to /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages/dobot-0.0.0-py3.12.egg-info
+[17.164s] running install_scripts
+[17.826s] Installing cartesian_ptp_node script to /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/dobot
+[17.849s] Installing homing_node script to /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/dobot
+[17.876s] Installing joint_ptp_node script to /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/dobot
+[17.897s] Installing joint_state_node script to /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/dobot
+[17.917s] Installing keyboard_node script to /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/dobot
+[17.935s] Installing pick_and_place_node script to /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/dobot
+[17.956s] Installing suction_cup_node script to /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/dobot
+[17.981s] writing list of installed files to '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/install.log'
+[18.011s] Invoked command in '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/src/dobot' returned '0': AMENT_PREFIX_PATH=/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib:${LD_LIBRARY_PATH} PYTHONPATH=/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages:/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/dobot build --build-base /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build install --record /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/install.log --single-version-externally-managed install_data

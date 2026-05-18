@@ -14,7 +14,7 @@ class SuctionCup(Node):
 
     def service_callback(self, request, response):
         try:
-            self.dobot = DobotClient
+            self.dobot = DobotClient()
             self.get_logger().info("Received suction cup service request")
             self.suction_enabled = not self.suction_enabled
             self.dobot.set_suction_cup(self.suction_enabled)

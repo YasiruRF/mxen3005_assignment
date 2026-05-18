@@ -7,5 +7,6 @@
 <node pkg="dobot" exec="joint_ptp_node"/>
 <node pkg="dobot" exec="cartesian_ptp_node"/>
 <node pkg="dobot" exec="pick_and_place_node"/>
+<node pkg="dobot" exec="keyboard_node"/>
 
 </launch>

@@ -1,0 +1,1231 @@
+[0.000000] (-) TimerEvent: {}
+[0.000896] (dobot_interface) JobQueued: {'identifier': 'dobot_interface', 'dependencies': OrderedDict()}
+[0.001639] (dobot) JobQueued: {'identifier': 'dobot', 'dependencies': OrderedDict({'dobot_interface': '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface'})}
+[0.002180] (dobot_interface) JobStarted: {'identifier': 'dobot_interface'}
+[0.092183] (-) TimerEvent: {}
+[0.158538] (dobot_interface) JobProgress: {'identifier': 'dobot_interface', 'progress': 'cmake'}
+[0.192475] (-) TimerEvent: {}
+[0.295047] (-) TimerEvent: {}
+[0.334682] (dobot_interface) JobProgress: {'identifier': 'dobot_interface', 'progress': 'build'}
+[0.378142] (dobot_interface) Command: {'cmd': ['/usr/bin/cmake', '--build', '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot_interface', '--', '-j16', '-l16'], 'cwd': '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot_interface', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'yasiru', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/kilted/opt/gz_math_vendor/lib:/opt/ros/kilted/opt/gz_utils_vendor/lib:/opt/ros/kilted/opt/rviz_ogre_vendor/lib:/opt/ros/kilted/lib/x86_64-linux-gnu:/opt/ros/kilted/opt/gz_cmake_vendor/lib:/opt/ros/kilted/lib', 'WT_PROFILE_ID': '{61c54bbd-c2c6-5271-96e7-009a87ff44bf}', 'HOME': '/home/yasiru', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'kilted', 'LOGNAME': 'yasiru', 'NAME': 'DESKTOP-Q4KDUO9', 'WSL_INTEROP': '/run/WSL/355_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/home/yasiru/.local/bin:/opt/ros/kilted/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Microsoft/jdk-21.0.10.7-hotspot/bin:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/MinGW/bin:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/GitHub CLI/:/mnt/c/Program Files (x86)/cloudflared/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Common Files/Autodesk Shared/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/Cloudflare/Cloudflare WARP/:/mnt/c/Strawberry/c/bin:/mnt/c/Strawberry/perl/site/bin:/mnt/c/Strawberry/perl/bin:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/Go/bin:/mnt/c/Users/U S E R/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/U S E R/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/U S E R/AppData/Local/Programs/Python/Launcher/:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/MinGW/bin:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/GitHub CLI/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files (x86)/cloudflared/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Common Files/Autodesk Shared/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/Cloudflare/Cloudflare WARP/:/mnt/c/Strawbe:/mnt/c/Users/U S E R/AppData/Roaming/npm:/mnt/c/Users/U S E R/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/U S E R/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/U S E R/AppData/Local/Programs/Ollama:/mnt/c/Users/U S E R/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/U S E R/go/bin:/snap/bin', 'WT_SESSION': '8f4d5b4c-6cad-4f25-99c8-884352efd3dc', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/opt/ros/kilted', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot_interface', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/kilted/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/opt/ros/kilted/opt/gz_math_vendor:/opt/ros/kilted/opt/gz_utils_vendor:/opt/ros/kilted/opt/gz_cmake_vendor:/opt/ros/kilted', 'WSLENV': 'WT_SESSION:WT_PROFILE_ID:'}), 'shell': False}
+[0.441846] (-) TimerEvent: {}
+[0.542911] (-) TimerEvent: {}
+[0.648615] (-) TimerEvent: {}
+[0.753516] (-) TimerEvent: {}
+[0.856122] (-) TimerEvent: {}
+[0.958452] (-) TimerEvent: {}
+[1.062229] (-) TimerEvent: {}
+[1.164791] (-) TimerEvent: {}
+[1.268665] (-) TimerEvent: {}
+[1.371665] (-) TimerEvent: {}
+[1.474214] (-) TimerEvent: {}
+[1.576564] (-) TimerEvent: {}
+[1.680504] (-) TimerEvent: {}
+[1.783252] (-) TimerEvent: {}
+[1.886937] (-) TimerEvent: {}
+[1.988256] (-) TimerEvent: {}
+[2.090809] (-) TimerEvent: {}
+[2.193778] (-) TimerEvent: {}
+[2.296285] (-) TimerEvent: {}
+[2.397789] (-) TimerEvent: {}
+[2.498380] (-) TimerEvent: {}
+[2.599972] (-) TimerEvent: {}
+[2.637574] (dobot_interface) StdoutLine: {'line': b'[  1%] Built target dobot_interface__rosidl_generator_type_description\n'}
+[2.700114] (-) TimerEvent: {}
+[2.803652] (-) TimerEvent: {}
+[2.881475] (dobot_interface) StdoutLine: {'line': b'[  3%] Built target dobot_interface__rs\n'}
+[2.903762] (-) TimerEvent: {}
+[3.004468] (-) TimerEvent: {}
+[3.105252] (-) TimerEvent: {}
+[3.207259] (-) TimerEvent: {}
+[3.309391] (-) TimerEvent: {}
+[3.401263] (dobot_interface) StdoutLine: {'line': b'[  5%] Built target dobot_interface__cpp\n'}
+[3.409888] (-) TimerEvent: {}
+[3.511511] (-) TimerEvent: {}
+[3.615249] (-) TimerEvent: {}
+[3.716233] (-) TimerEvent: {}
+[3.819949] (-) TimerEvent: {}
+[3.920753] (-) TimerEvent: {}
+[4.023755] (-) TimerEvent: {}
+[4.125005] (-) TimerEvent: {}
+[4.226963] (-) TimerEvent: {}
+[4.328720] (-) TimerEvent: {}
+[4.429491] (-) TimerEvent: {}
+[4.531780] (-) TimerEvent: {}
+[4.616019] (dobot_interface) StdoutLine: {'line': b'[ 25%] Built target dobot_interface__rosidl_generator_c\n'}
+[4.631897] (-) TimerEvent: {}
+[4.732704] (-) TimerEvent: {}
+[4.835085] (-) TimerEvent: {}
+[4.937843] (-) TimerEvent: {}
+[4.999663] (dobot_interface) StdoutLine: {'line': b'[ 25%] Built target ament_cmake_python_copy_dobot_interface\n'}
+[5.037922] (-) TimerEvent: {}
+[5.139078] (-) TimerEvent: {}
+[5.226215] (dobot_interface) StdoutLine: {'line': b'[ 34%] Built target dobot_interface__rosidl_typesupport_c\n'}
+[5.239159] (-) TimerEvent: {}
+[5.330253] (dobot_interface) StdoutLine: {'line': b'[ 43%] Built target dobot_interface__rosidl_typesupport_cpp\n'}
+[5.339289] (-) TimerEvent: {}
+[5.369430] (dobot_interface) StdoutLine: {'line': b'[ 52%] Built target dobot_interface__rosidl_typesupport_introspection_c\n'}
+[5.417131] (dobot_interface) StdoutLine: {'line': b'running egg_info\n'}
+[5.425873] (dobot_interface) StdoutLine: {'line': b'[ 63%] Built target dobot_interface__rosidl_typesupport_introspection_cpp\n'}
+[5.436575] (dobot_interface) StdoutLine: {'line': b'writing dobot_interface.egg-info/PKG-INFO\n'}
+[5.440409] (-) TimerEvent: {}
+[5.448131] (dobot_interface) StdoutLine: {'line': b'writing dependency_links to dobot_interface.egg-info/dependency_links.txt\n'}
+[5.459591] (dobot_interface) StdoutLine: {'line': b'[ 70%] Built target dobot_interface__rosidl_typesupport_fastrtps_c\n'}
+[5.461906] (dobot_interface) StdoutLine: {'line': b'writing top-level names to dobot_interface.egg-info/top_level.txt\n'}
+[5.521822] (dobot_interface) StdoutLine: {'line': b'[ 80%] Built target dobot_interface__rosidl_typesupport_fastrtps_cpp\n'}
+[5.540531] (-) TimerEvent: {}
+[5.623157] (dobot_interface) StdoutLine: {'line': b"reading manifest file 'dobot_interface.egg-info/SOURCES.txt'\n"}
+[5.640608] (-) TimerEvent: {}
+[5.664918] (dobot_interface) StdoutLine: {'line': b'[ 80%] Built target dobot_interface\n'}
+[5.732373] (dobot_interface) StdoutLine: {'line': b"writing manifest file 'dobot_interface.egg-info/SOURCES.txt'\n"}
+[5.740678] (-) TimerEvent: {}
+[5.777127] (dobot_interface) StdoutLine: {'line': b'[ 80%] Built target ament_cmake_python_build_dobot_interface_egg\n'}
+[5.840808] (-) TimerEvent: {}
+[5.942444] (-) TimerEvent: {}
+[6.043500] (-) TimerEvent: {}
+[6.080102] (dobot_interface) StdoutLine: {'line': b'[ 81%] Built target dobot_interface__py\n'}
+[6.143604] (-) TimerEvent: {}
+[6.244118] (-) TimerEvent: {}
+[6.344571] (-) TimerEvent: {}
+[6.444976] (-) TimerEvent: {}
+[6.545675] (-) TimerEvent: {}
+[6.647039] (-) TimerEvent: {}
+[6.732423] (dobot_interface) StdoutLine: {'line': b'[ 89%] Built target dobot_interface__rosidl_generator_py\n'}
+[6.747163] (-) TimerEvent: {}
+[6.848931] (-) TimerEvent: {}
+[6.951821] (-) TimerEvent: {}
+[7.052497] (-) TimerEvent: {}
+[7.141394] (dobot_interface) StdoutLine: {'line': b'[100%] Built target dobot_interface_s__rosidl_typesupport_c\n'}
+[7.143564] (dobot_interface) StdoutLine: {'line': b'[100%] Built target dobot_interface_s__rosidl_typesupport_fastrtps_c\n'}
+[7.144617] (dobot_interface) StdoutLine: {'line': b'[100%] Built target dobot_interface_s__rosidl_typesupport_introspection_c\n'}
+[7.152620] (-) TimerEvent: {}
+[7.253098] (-) TimerEvent: {}
+[7.355048] (-) TimerEvent: {}
+[7.457704] (-) TimerEvent: {}
+[7.559247] (-) TimerEvent: {}
+[7.661656] (-) TimerEvent: {}
+[7.763440] (-) TimerEvent: {}
+[7.865563] (-) TimerEvent: {}
+[7.940963] (dobot_interface) CommandEnded: {'returncode': 0}
+[7.965669] (-) TimerEvent: {}
+[8.002343] (dobot_interface) JobProgress: {'identifier': 'dobot_interface', 'progress': 'install'}
+[8.035602] (dobot_interface) Command: {'cmd': ['/usr/bin/cmake', '--install', '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot_interface'], 'cwd': '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot_interface', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'yasiru', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/kilted/opt/gz_math_vendor/lib:/opt/ros/kilted/opt/gz_utils_vendor/lib:/opt/ros/kilted/opt/rviz_ogre_vendor/lib:/opt/ros/kilted/lib/x86_64-linux-gnu:/opt/ros/kilted/opt/gz_cmake_vendor/lib:/opt/ros/kilted/lib', 'WT_PROFILE_ID': '{61c54bbd-c2c6-5271-96e7-009a87ff44bf}', 'HOME': '/home/yasiru', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'kilted', 'LOGNAME': 'yasiru', 'NAME': 'DESKTOP-Q4KDUO9', 'WSL_INTEROP': '/run/WSL/355_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/home/yasiru/.local/bin:/opt/ros/kilted/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Microsoft/jdk-21.0.10.7-hotspot/bin:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/MinGW/bin:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/GitHub CLI/:/mnt/c/Program Files (x86)/cloudflared/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Common Files/Autodesk Shared/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/Cloudflare/Cloudflare WARP/:/mnt/c/Strawberry/c/bin:/mnt/c/Strawberry/perl/site/bin:/mnt/c/Strawberry/perl/bin:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/Go/bin:/mnt/c/Users/U S E R/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/U S E R/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/U S E R/AppData/Local/Programs/Python/Launcher/:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/MinGW/bin:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/GitHub CLI/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files (x86)/cloudflared/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Common Files/Autodesk Shared/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/Cloudflare/Cloudflare WARP/:/mnt/c/Strawbe:/mnt/c/Users/U S E R/AppData/Roaming/npm:/mnt/c/Users/U S E R/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/U S E R/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/U S E R/AppData/Local/Programs/Ollama:/mnt/c/Users/U S E R/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/U S E R/go/bin:/snap/bin', 'WT_SESSION': '8f4d5b4c-6cad-4f25-99c8-884352efd3dc', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/opt/ros/kilted', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot_interface', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/kilted/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/opt/ros/kilted/opt/gz_math_vendor:/opt/ros/kilted/opt/gz_utils_vendor:/opt/ros/kilted/opt/gz_cmake_vendor:/opt/ros/kilted', 'WSLENV': 'WT_SESSION:WT_PROFILE_ID:'}), 'shell': False}
+[8.065784] (-) TimerEvent: {}
+[8.069011] (dobot_interface) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[8.153378] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/ament_index/resource_index/rosidl_interfaces/dobot_interface\n'}
+[8.165923] (-) TimerEvent: {}
+[8.266939] (-) TimerEvent: {}
+[8.333513] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/action/JointPTP.json\n'}
+[8.367025] (-) TimerEvent: {}
+[8.383477] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/action/PosePTP.json\n'}
+[8.432681] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/srv/PickAndPlace.json\n'}
+[8.464207] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface\n'}
+[8.467102] (-) TimerEvent: {}
+[8.567658] (-) TimerEvent: {}
+[8.589971] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action\n'}
+[8.667797] (-) TimerEvent: {}
+[8.722508] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail\n'}
+[8.767916] (-) TimerEvent: {}
+[8.846320] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/joint_ptp__description.c\n'}
+[8.868012] (-) TimerEvent: {}
+[8.975012] (-) TimerEvent: {}
+[9.018971] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/joint_ptp__functions.c\n'}
+[9.075183] (-) TimerEvent: {}
+[9.140280] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/joint_ptp__functions.h\n'}
+[9.175280] (-) TimerEvent: {}
+[9.253544] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/joint_ptp__struct.h\n'}
+[9.275393] (-) TimerEvent: {}
+[9.379190] (-) TimerEvent: {}
+[9.404563] (dobot_interface) StdoutLine: {'line': b'-- Installing: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/joint_ptp__type_support.c\n'}
+[9.479346] (-) TimerEvent: {}
+[9.580542] (-) TimerEvent: {}
+[9.631229] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/joint_ptp__type_support.h\n'}
+[9.680651] (-) TimerEvent: {}
+[9.690115] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/pose_ptp__description.c\n'}
+[9.780748] (-) TimerEvent: {}
+[9.801309] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/pose_ptp__functions.c\n'}
+[9.880935] (-) TimerEvent: {}
+[9.971744] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/pose_ptp__functions.h\n'}
+[9.980996] (-) TimerEvent: {}
+[10.082381] (-) TimerEvent: {}
+[10.159149] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/pose_ptp__struct.h\n'}
+[10.182552] (-) TimerEvent: {}
+[10.261593] (dobot_interface) StdoutLine: {'line': b'-- Installing: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/pose_ptp__type_support.c\n'}
+[10.282614] (-) TimerEvent: {}
+[10.383140] (-) TimerEvent: {}
+[10.484161] (-) TimerEvent: {}
+[10.586319] (-) TimerEvent: {}
+[10.687848] (-) TimerEvent: {}
+[10.789681] (-) TimerEvent: {}
+[10.872653] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/pose_ptp__type_support.h\n'}
+[10.889806] (-) TimerEvent: {}
+[10.990842] (-) TimerEvent: {}
+[11.077187] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/joint_ptp.h\n'}
+[11.091070] (-) TimerEvent: {}
+[11.196193] (-) TimerEvent: {}
+[11.240501] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/pose_ptp.h\n'}
+[11.296420] (-) TimerEvent: {}
+[11.400536] (-) TimerEvent: {}
+[11.434018] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/msg\n'}
+[11.500678] (-) TimerEvent: {}
+[11.563209] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/msg/rosidl_generator_c__visibility_control.h\n'}
+[11.600794] (-) TimerEvent: {}
+[11.636219] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv\n'}
+[11.700955] (-) TimerEvent: {}
+[11.775062] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail\n'}
+[11.801075] (-) TimerEvent: {}
+[11.858791] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/pick_and_place__description.c\n'}
+[11.901251] (-) TimerEvent: {}
+[11.923007] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/pick_and_place__functions.c\n'}
+[12.001300] (-) TimerEvent: {}
+[12.034216] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/pick_and_place__functions.h\n'}
+[12.101415] (-) TimerEvent: {}
+[12.178738] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/pick_and_place__struct.h\n'}
+[12.201525] (-) TimerEvent: {}
+[12.302206] (-) TimerEvent: {}
+[12.355873] (dobot_interface) StdoutLine: {'line': b'-- Installing: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/pick_and_place__type_support.c\n'}
+[12.402296] (-) TimerEvent: {}
+[12.502783] (-) TimerEvent: {}
+[12.603498] (-) TimerEvent: {}
+[12.707880] (-) TimerEvent: {}
+[12.779810] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/pick_and_place__type_support.h\n'}
+[12.808071] (-) TimerEvent: {}
+[12.866864] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/pick_and_place.h\n'}
+[12.908186] (-) TimerEvent: {}
+[12.934297] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/environment/library_path.sh\n'}
+[13.008302] (-) TimerEvent: {}
+[13.029044] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/environment/library_path.dsv\n'}
+[13.108433] (-) TimerEvent: {}
+[13.209711] (-) TimerEvent: {}
+[13.257091] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/libdobot_interface__rosidl_generator_c.so\n'}
+[13.309940] (-) TimerEvent: {}
+[13.413582] (-) TimerEvent: {}
+[13.518480] (-) TimerEvent: {}
+[13.622881] (-) TimerEvent: {}
+[13.644284] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface\n'}
+[13.722974] (-) TimerEvent: {}
+[13.763901] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action\n'}
+[13.823134] (-) TimerEvent: {}
+[13.925531] (-) TimerEvent: {}
+[13.928143] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail\n'}
+[14.026400] (-) TimerEvent: {}
+[14.129981] (-) TimerEvent: {}
+[14.232680] (-) TimerEvent: {}
+[14.333743] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/joint_ptp__rosidl_typesupport_fastrtps_c.h\n'}
+[14.341881] (-) TimerEvent: {}
+[14.446477] (-) TimerEvent: {}
+[14.522737] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/pose_ptp__rosidl_typesupport_fastrtps_c.h\n'}
+[14.546556] (-) TimerEvent: {}
+[14.647937] (-) TimerEvent: {}
+[14.694334] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/msg\n'}
+[14.748210] (-) TimerEvent: {}
+[14.850288] (-) TimerEvent: {}
+[14.954766] (-) TimerEvent: {}
+[15.016549] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[15.054991] (-) TimerEvent: {}
+[15.156980] (-) TimerEvent: {}
+[15.185388] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv\n'}
+[15.257616] (-) TimerEvent: {}
+[15.360775] (-) TimerEvent: {}
+[15.463385] (-) TimerEvent: {}
+[15.514675] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail\n'}
+[15.563664] (-) TimerEvent: {}
+[15.665222] (-) TimerEvent: {}
+[15.766969] (-) TimerEvent: {}
+[15.860677] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/pick_and_place__rosidl_typesupport_fastrtps_c.h\n'}
+[15.875055] (-) TimerEvent: {}
+[15.977002] (-) TimerEvent: {}
+[16.079269] (-) TimerEvent: {}
+[16.181688] (-) TimerEvent: {}
+[16.249298] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/libdobot_interface__rosidl_typesupport_fastrtps_c.so\n'}
+[16.281991] (-) TimerEvent: {}
+[16.385133] (-) TimerEvent: {}
+[16.489724] (-) TimerEvent: {}
+[16.592987] (-) TimerEvent: {}
+[16.688248] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface\n'}
+[16.695661] (-) TimerEvent: {}
+[16.797526] (-) TimerEvent: {}
+[16.899507] (-) TimerEvent: {}
+[16.926175] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action\n'}
+[16.999669] (-) TimerEvent: {}
+[17.101474] (-) TimerEvent: {}
+[17.203865] (-) TimerEvent: {}
+[17.255186] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail\n'}
+[17.304122] (-) TimerEvent: {}
+[17.406813] (-) TimerEvent: {}
+[17.511602] (-) TimerEvent: {}
+[17.592902] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/joint_ptp__rosidl_typesupport_introspection_c.h\n'}
+[17.611959] (-) TimerEvent: {}
+[17.716069] (-) TimerEvent: {}
+[17.821295] (-) TimerEvent: {}
+[17.925473] (-) TimerEvent: {}
+[17.970505] (dobot_interface) StdoutLine: {'line': b'-- Installing: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/joint_ptp__type_support.c\n'}
+[18.025804] (-) TimerEvent: {}
+[18.128312] (-) TimerEvent: {}
+[18.231266] (-) TimerEvent: {}
+[18.333499] (-) TimerEvent: {}
+[18.436365] (-) TimerEvent: {}
+[18.537361] (-) TimerEvent: {}
+[18.638254] (-) TimerEvent: {}
+[18.741818] (-) TimerEvent: {}
+[18.765995] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/pose_ptp__rosidl_typesupport_introspection_c.h\n'}
+[18.842208] (-) TimerEvent: {}
+[18.876412] (dobot_interface) StdoutLine: {'line': b'-- Installing: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/pose_ptp__type_support.c\n'}
+[18.942235] (-) TimerEvent: {}
+[19.043499] (-) TimerEvent: {}
+[19.123728] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/msg\n'}
+[19.143601] (-) TimerEvent: {}
+[19.241729] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[19.243613] (-) TimerEvent: {}
+[19.292483] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv\n'}
+[19.344029] (-) TimerEvent: {}
+[19.430462] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail\n'}
+[19.444179] (-) TimerEvent: {}
+[19.545573] (-) TimerEvent: {}
+[19.648824] (-) TimerEvent: {}
+[19.729250] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/pick_and_place__rosidl_typesupport_introspection_c.h\n'}
+[19.748895] (-) TimerEvent: {}
+[19.804239] (dobot_interface) StdoutLine: {'line': b'-- Installing: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/pick_and_place__type_support.c\n'}
+[19.849029] (-) TimerEvent: {}
+[19.951130] (-) TimerEvent: {}
+[20.056033] (-) TimerEvent: {}
+[20.157509] (-) TimerEvent: {}
+[20.261548] (-) TimerEvent: {}
+[20.366142] (-) TimerEvent: {}
+[20.399585] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/libdobot_interface__rosidl_typesupport_introspection_c.so\n'}
+[20.466292] (-) TimerEvent: {}
+[20.567836] (-) TimerEvent: {}
+[20.669372] (-) TimerEvent: {}
+[20.698362] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/libdobot_interface__rosidl_typesupport_c.so\n'}
+[20.769449] (-) TimerEvent: {}
+[20.830433] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface\n'}
+[20.869537] (-) TimerEvent: {}
+[20.942444] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action\n'}
+[20.969646] (-) TimerEvent: {}
+[21.061321] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail\n'}
+[21.069733] (-) TimerEvent: {}
+[21.170556] (-) TimerEvent: {}
+[21.208217] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/joint_ptp__builder.hpp\n'}
+[21.270673] (-) TimerEvent: {}
+[21.339281] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/joint_ptp__struct.hpp\n'}
+[21.370761] (-) TimerEvent: {}
+[21.471615] (-) TimerEvent: {}
+[21.573485] (-) TimerEvent: {}
+[21.627087] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/joint_ptp__traits.hpp\n'}
+[21.673675] (-) TimerEvent: {}
+[21.777169] (-) TimerEvent: {}
+[21.806179] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/joint_ptp__type_support.hpp\n'}
+[21.877339] (-) TimerEvent: {}
+[21.888664] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/pose_ptp__builder.hpp\n'}
+[21.977402] (-) TimerEvent: {}
+[21.992875] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/pose_ptp__struct.hpp\n'}
+[22.077497] (-) TimerEvent: {}
+[22.079340] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/pose_ptp__traits.hpp\n'}
+[22.177597] (-) TimerEvent: {}
+[22.202650] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/pose_ptp__type_support.hpp\n'}
+[22.277728] (-) TimerEvent: {}
+[22.289388] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/joint_ptp.hpp\n'}
+[22.377836] (-) TimerEvent: {}
+[22.390534] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/pose_ptp.hpp\n'}
+[22.457605] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/msg\n'}
+[22.477946] (-) TimerEvent: {}
+[22.520233] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[22.559971] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv\n'}
+[22.578062] (-) TimerEvent: {}
+[22.630230] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail\n'}
+[22.678160] (-) TimerEvent: {}
+[22.735666] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/pick_and_place__builder.hpp\n'}
+[22.778260] (-) TimerEvent: {}
+[22.813893] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/pick_and_place__struct.hpp\n'}
+[22.878432] (-) TimerEvent: {}
+[22.935233] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/pick_and_place__traits.hpp\n'}
+[22.978515] (-) TimerEvent: {}
+[23.029665] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/pick_and_place__type_support.hpp\n'}
+[23.078741] (-) TimerEvent: {}
+[23.117931] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/pick_and_place.hpp\n'}
+[23.176958] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface\n'}
+[23.178770] (-) TimerEvent: {}
+[23.251332] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action\n'}
+[23.278881] (-) TimerEvent: {}
+[23.382242] (-) TimerEvent: {}
+[23.396674] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail\n'}
+[23.482285] (-) TimerEvent: {}
+[23.551138] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/dds_fastrtps\n'}
+[23.582540] (-) TimerEvent: {}
+[23.684581] (-) TimerEvent: {}
+[23.732423] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/joint_ptp__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[23.784774] (-) TimerEvent: {}
+[23.820220] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/pose_ptp__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[23.884917] (-) TimerEvent: {}
+[23.908353] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/msg\n'}
+[23.985028] (-) TimerEvent: {}
+[24.086359] (-) TimerEvent: {}
+[24.087340] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[24.150837] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv\n'}
+[24.186478] (-) TimerEvent: {}
+[24.290432] (-) TimerEvent: {}
+[24.350621] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail\n'}
+[24.390543] (-) TimerEvent: {}
+[24.492169] (-) TimerEvent: {}
+[24.568066] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/dds_fastrtps\n'}
+[24.592516] (-) TimerEvent: {}
+[24.695037] (-) TimerEvent: {}
+[24.800585] (-) TimerEvent: {}
+[24.905810] (-) TimerEvent: {}
+[24.987975] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/pick_and_place__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[25.005910] (-) TimerEvent: {}
+[25.107064] (-) TimerEvent: {}
+[25.209572] (-) TimerEvent: {}
+[25.282648] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/libdobot_interface__rosidl_typesupport_fastrtps_cpp.so\n'}
+[25.309790] (-) TimerEvent: {}
+[25.413410] (-) TimerEvent: {}
+[25.515155] (-) TimerEvent: {}
+[25.581829] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface\n'}
+[25.615252] (-) TimerEvent: {}
+[25.630789] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action\n'}
+[25.715341] (-) TimerEvent: {}
+[25.728332] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail\n'}
+[25.815500] (-) TimerEvent: {}
+[25.889390] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/joint_ptp__rosidl_typesupport_introspection_cpp.hpp\n'}
+[25.915794] (-) TimerEvent: {}
+[26.018201] (-) TimerEvent: {}
+[26.023571] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/joint_ptp__type_support.cpp\n'}
+[26.118411] (-) TimerEvent: {}
+[26.196235] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/pose_ptp__rosidl_typesupport_introspection_cpp.hpp\n'}
+[26.218653] (-) TimerEvent: {}
+[26.318993] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/action/detail/pose_ptp__type_support.cpp\n'}
+[26.319915] (-) TimerEvent: {}
+[26.349869] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv\n'}
+[26.420092] (-) TimerEvent: {}
+[26.464885] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail\n'}
+[26.520352] (-) TimerEvent: {}
+[26.624132] (-) TimerEvent: {}
+[26.666036] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/pick_and_place__rosidl_typesupport_introspection_cpp.hpp\n'}
+[26.724224] (-) TimerEvent: {}
+[26.826407] (-) TimerEvent: {}
+[26.840591] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/include/dobot_interface/dobot_interface/srv/detail/pick_and_place__type_support.cpp\n'}
+[26.926626] (-) TimerEvent: {}
+[27.028157] (-) TimerEvent: {}
+[27.129268] (-) TimerEvent: {}
+[27.231263] (-) TimerEvent: {}
+[27.292819] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/libdobot_interface__rosidl_typesupport_introspection_cpp.so\n'}
+[27.331453] (-) TimerEvent: {}
+[27.432604] (-) TimerEvent: {}
+[27.535096] (-) TimerEvent: {}
+[27.636112] (-) TimerEvent: {}
+[27.683788] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/libdobot_interface__rosidl_typesupport_cpp.so\n'}
+[27.736253] (-) TimerEvent: {}
+[27.772664] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/environment/pythonpath.sh\n'}
+[27.836535] (-) TimerEvent: {}
+[27.914977] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/environment/pythonpath.dsv\n'}
+[27.936629] (-) TimerEvent: {}
+[28.038383] (-) TimerEvent: {}
+[28.041556] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface-0.0.0-py3.12.egg-info\n'}
+[28.138493] (-) TimerEvent: {}
+[28.177746] (dobot_interface) StdoutLine: {'line': b'-- Installing: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface-0.0.0-py3.12.egg-info/dependency_links.txt\n'}
+[28.238639] (-) TimerEvent: {}
+[28.342319] (-) TimerEvent: {}
+[28.443435] (-) TimerEvent: {}
+[28.545878] (-) TimerEvent: {}
+[28.622533] (dobot_interface) StdoutLine: {'line': b'-- Installing: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface-0.0.0-py3.12.egg-info/PKG-INFO\n'}
+[28.645967] (-) TimerEvent: {}
+[28.747585] (-) TimerEvent: {}
+[28.850962] (-) TimerEvent: {}
+[28.953870] (-) TimerEvent: {}
+[29.056287] (-) TimerEvent: {}
+[29.065172] (dobot_interface) StdoutLine: {'line': b'-- Installing: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface-0.0.0-py3.12.egg-info/SOURCES.txt\n'}
+[29.156326] (-) TimerEvent: {}
+[29.258784] (-) TimerEvent: {}
+[29.318146] (dobot_interface) StdoutLine: {'line': b'-- Installing: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface-0.0.0-py3.12.egg-info/top_level.txt\n'}
+[29.358881] (-) TimerEvent: {}
+[29.459705] (-) TimerEvent: {}
+[29.493531] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface\n'}
+[29.559904] (-) TimerEvent: {}
+[29.594765] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/action\n'}
+[29.660034] (-) TimerEvent: {}
+[29.762293] (-) TimerEvent: {}
+[29.801245] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/action/_joint_ptp.py\n'}
+[29.862457] (-) TimerEvent: {}
+[29.873590] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/action/_joint_ptp_s.c\n'}
+[29.943434] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/action/_pose_ptp.py\n'}
+[29.962559] (-) TimerEvent: {}
+[30.014575] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/action/_pose_ptp_s.c\n'}
+[30.062720] (-) TimerEvent: {}
+[30.118584] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/action/__init__.py\n'}
+[30.163024] (-) TimerEvent: {}
+[30.231579] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/dobot_interface_s__rosidl_typesupport_c.so\n'}
+[30.263117] (-) TimerEvent: {}
+[30.275274] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/dobot_interface_s__rosidl_typesupport_fastrtps_c.so\n'}
+[30.358874] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/dobot_interface_s__rosidl_typesupport_introspection_c.so\n'}
+[30.363455] (-) TimerEvent: {}
+[30.464085] (-) TimerEvent: {}
+[30.482319] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/srv\n'}
+[30.564246] (-) TimerEvent: {}
+[30.614357] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/srv/_pick_and_place.py\n'}
+[30.664348] (-) TimerEvent: {}
+[30.698821] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/srv/_pick_and_place_s.c\n'}
+[30.742781] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/srv/__init__.py\n'}
+[30.764462] (-) TimerEvent: {}
+[30.787896] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/_dobot_interface_s.ep.rosidl_typesupport_c.c\n'}
+[30.846865] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/_dobot_interface_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[30.864857] (-) TimerEvent: {}
+[30.903106] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/_dobot_interface_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[30.965027] (-) TimerEvent: {}
+[31.027467] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/__init__.py\n'}
+[31.065180] (-) TimerEvent: {}
+[31.166735] (-) TimerEvent: {}
+[31.267192] (-) TimerEvent: {}
+[31.368352] (-) TimerEvent: {}
+[31.469255] (-) TimerEvent: {}
+[31.569945] (-) TimerEvent: {}
+[31.671167] (-) TimerEvent: {}
+[31.686662] (dobot_interface) StdoutLine: {'line': b"Listing '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface'...\n"}
+[31.696572] (dobot_interface) StdoutLine: {'line': b"Listing '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/action'...\n"}
+[31.703568] (dobot_interface) StdoutLine: {'line': b"Listing '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/srv'...\n"}
+[31.771471] (-) TimerEvent: {}
+[31.874923] (-) TimerEvent: {}
+[31.976062] (-) TimerEvent: {}
+[32.078950] (-) TimerEvent: {}
+[32.172229] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/dobot_interface_s__rosidl_typesupport_fastrtps_c.so\n'}
+[32.183184] (-) TimerEvent: {}
+[32.287237] (-) TimerEvent: {}
+[32.389123] (-) TimerEvent: {}
+[32.490945] (-) TimerEvent: {}
+[32.591786] (-) TimerEvent: {}
+[32.694267] (-) TimerEvent: {}
+[32.727688] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/dobot_interface_s__rosidl_typesupport_introspection_c.so\n'}
+[32.794427] (-) TimerEvent: {}
+[32.896230] (-) TimerEvent: {}
+[33.000187] (-) TimerEvent: {}
+[33.102722] (-) TimerEvent: {}
+[33.204729] (-) TimerEvent: {}
+[33.309788] (-) TimerEvent: {}
+[33.415230] (-) TimerEvent: {}
+[33.518861] (-) TimerEvent: {}
+[33.607099] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages/dobot_interface/dobot_interface_s__rosidl_typesupport_c.so\n'}
+[33.618979] (-) TimerEvent: {}
+[33.720138] (-) TimerEvent: {}
+[33.825363] (-) TimerEvent: {}
+[33.930050] (-) TimerEvent: {}
+[34.033831] (-) TimerEvent: {}
+[34.136237] (-) TimerEvent: {}
+[34.237705] (-) TimerEvent: {}
+[34.340315] (-) TimerEvent: {}
+[34.443617] (-) TimerEvent: {}
+[34.461926] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/libdobot_interface__rosidl_generator_py.so\n'}
+[34.544067] (-) TimerEvent: {}
+[34.646827] (-) TimerEvent: {}
+[34.750861] (-) TimerEvent: {}
+[34.852664] (-) TimerEvent: {}
+[34.956755] (-) TimerEvent: {}
+[35.041262] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/ament_index/resource_index/rust_packages/dobot_interface\n'}
+[35.056879] (-) TimerEvent: {}
+[35.134728] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/rust\n'}
+[35.156953] (-) TimerEvent: {}
+[35.160047] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/rust/build.rs\n'}
+[35.179309] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/rust/Cargo.toml\n'}
+[35.194608] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/rust/src\n'}
+[35.257409] (-) TimerEvent: {}
+[35.362922] (-) TimerEvent: {}
+[35.399201] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/rust/src/action\n'}
+[35.463349] (-) TimerEvent: {}
+[35.569153] (-) TimerEvent: {}
+[35.670687] (-) TimerEvent: {}
+[35.737026] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/rust/src/action/rmw.rs\n'}
+[35.770956] (-) TimerEvent: {}
+[35.874355] (-) TimerEvent: {}
+[35.952754] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/rust/src/action.rs\n'}
+[35.974380] (-) TimerEvent: {}
+[36.075371] (-) TimerEvent: {}
+[36.130997] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/rust/src/lib.rs\n'}
+[36.175692] (-) TimerEvent: {}
+[36.280037] (-) TimerEvent: {}
+[36.386288] (-) TimerEvent: {}
+[36.475948] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/rust/src/srv\n'}
+[36.486664] (-) TimerEvent: {}
+[36.589319] (-) TimerEvent: {}
+[36.695424] (-) TimerEvent: {}
+[36.799558] (-) TimerEvent: {}
+[36.902534] (-) TimerEvent: {}
+[37.010619] (-) TimerEvent: {}
+[37.019704] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/rust/src/srv/rmw.rs\n'}
+[37.110994] (-) TimerEvent: {}
+[37.213834] (-) TimerEvent: {}
+[37.318440] (-) TimerEvent: {}
+[37.413171] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/rust/src/srv.rs\n'}
+[37.421090] (-) TimerEvent: {}
+[37.527027] (-) TimerEvent: {}
+[37.629264] (-) TimerEvent: {}
+[37.731436] (-) TimerEvent: {}
+[37.792453] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/action/JointPTP.idl\n'}
+[37.831724] (-) TimerEvent: {}
+[37.934698] (-) TimerEvent: {}
+[38.039727] (-) TimerEvent: {}
+[38.146576] (-) TimerEvent: {}
+[38.177936] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/action/PosePTP.idl\n'}
+[38.247127] (-) TimerEvent: {}
+[38.352130] (-) TimerEvent: {}
+[38.455816] (-) TimerEvent: {}
+[38.561979] (-) TimerEvent: {}
+[38.637046] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/srv/PickAndPlace.idl\n'}
+[38.662411] (-) TimerEvent: {}
+[38.767094] (-) TimerEvent: {}
+[38.869379] (-) TimerEvent: {}
+[38.970370] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/action/JointPTP.action\n'}
+[38.976920] (-) TimerEvent: {}
+[39.079652] (-) TimerEvent: {}
+[39.184769] (-) TimerEvent: {}
+[39.223818] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/action/PosePTP.action\n'}
+[39.285092] (-) TimerEvent: {}
+[39.348328] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/srv/PickAndPlace.srv\n'}
+[39.385185] (-) TimerEvent: {}
+[39.488400] (-) TimerEvent: {}
+[39.591454] (-) TimerEvent: {}
+[39.693663] (-) TimerEvent: {}
+[39.755713] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/ament_index/resource_index/package_run_dependencies/dobot_interface\n'}
+[39.794264] (-) TimerEvent: {}
+[39.898819] (-) TimerEvent: {}
+[40.000524] (-) TimerEvent: {}
+[40.059877] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/ament_index/resource_index/parent_prefix_path/dobot_interface\n'}
+[40.100882] (-) TimerEvent: {}
+[40.204004] (-) TimerEvent: {}
+[40.306931] (-) TimerEvent: {}
+[40.373536] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/environment/ament_prefix_path.sh\n'}
+[40.407201] (-) TimerEvent: {}
+[40.509317] (-) TimerEvent: {}
+[40.611756] (-) TimerEvent: {}
+[40.642405] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/environment/ament_prefix_path.dsv\n'}
+[40.712080] (-) TimerEvent: {}
+[40.796038] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/environment/path.sh\n'}
+[40.812177] (-) TimerEvent: {}
+[40.914167] (-) TimerEvent: {}
+[41.015678] (-) TimerEvent: {}
+[41.035146] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/environment/path.dsv\n'}
+[41.116003] (-) TimerEvent: {}
+[41.218296] (-) TimerEvent: {}
+[41.322816] (-) TimerEvent: {}
+[41.332112] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/local_setup.bash\n'}
+[41.423319] (-) TimerEvent: {}
+[41.525640] (-) TimerEvent: {}
+[41.534914] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/local_setup.sh\n'}
+[41.601996] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/local_setup.zsh\n'}
+[41.625732] (-) TimerEvent: {}
+[41.696685] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/local_setup.dsv\n'}
+[41.725885] (-) TimerEvent: {}
+[41.792081] (dobot_interface) StdoutLine: {'line': b'-- Installing: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/package.dsv\n'}
+[41.826199] (-) TimerEvent: {}
+[41.928898] (-) TimerEvent: {}
+[42.033235] (-) TimerEvent: {}
+[42.136719] (-) TimerEvent: {}
+[42.239241] (-) TimerEvent: {}
+[42.340457] (-) TimerEvent: {}
+[42.444648] (-) TimerEvent: {}
+[42.461505] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/ament_index/resource_index/packages/dobot_interface\n'}
+[42.544977] (-) TimerEvent: {}
+[42.647237] (-) TimerEvent: {}
+[42.749701] (-) TimerEvent: {}
+[42.856957] (-) TimerEvent: {}
+[42.964147] (-) TimerEvent: {}
+[43.029804] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/export_dobot_interface__rosidl_generator_cExport.cmake\n'}
+[43.064417] (-) TimerEvent: {}
+[43.169193] (-) TimerEvent: {}
+[43.270947] (-) TimerEvent: {}
+[43.272762] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/export_dobot_interface__rosidl_generator_cExport-noconfig.cmake\n'}
+[43.371264] (-) TimerEvent: {}
+[43.473538] (-) TimerEvent: {}
+[43.575831] (-) TimerEvent: {}
+[43.680003] (-) TimerEvent: {}
+[43.728460] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/export_dobot_interface__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[43.780291] (-) TimerEvent: {}
+[43.881743] (-) TimerEvent: {}
+[43.952102] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/export_dobot_interface__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[43.981926] (-) TimerEvent: {}
+[44.084118] (-) TimerEvent: {}
+[44.186271] (-) TimerEvent: {}
+[44.289073] (-) TimerEvent: {}
+[44.392539] (-) TimerEvent: {}
+[44.496000] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/dobot_interface__rosidl_typesupport_introspection_cExport.cmake\n'}
+[44.504530] (-) TimerEvent: {}
+[44.607390] (-) TimerEvent: {}
+[44.710725] (-) TimerEvent: {}
+[44.813350] (-) TimerEvent: {}
+[44.831044] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/dobot_interface__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[44.913813] (-) TimerEvent: {}
+[45.017351] (-) TimerEvent: {}
+[45.062859] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/dobot_interface__rosidl_typesupport_cExport.cmake\n'}
+[45.117560] (-) TimerEvent: {}
+[45.220474] (-) TimerEvent: {}
+[45.312414] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/dobot_interface__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[45.320530] (-) TimerEvent: {}
+[45.424047] (-) TimerEvent: {}
+[45.525991] (-) TimerEvent: {}
+[45.613435] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/export_dobot_interface__rosidl_generator_cppExport.cmake\n'}
+[45.626039] (-) TimerEvent: {}
+[45.726467] (-) TimerEvent: {}
+[45.818795] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/export_dobot_interface__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[45.826574] (-) TimerEvent: {}
+[45.929194] (-) TimerEvent: {}
+[46.034483] (-) TimerEvent: {}
+[46.107300] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/export_dobot_interface__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[46.134572] (-) TimerEvent: {}
+[46.238007] (-) TimerEvent: {}
+[46.344298] (-) TimerEvent: {}
+[46.383453] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/dobot_interface__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[46.443358] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/dobot_interface__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[46.444525] (-) TimerEvent: {}
+[46.526412] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/dobot_interface__rosidl_typesupport_cppExport.cmake\n'}
+[46.544639] (-) TimerEvent: {}
+[46.610216] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/dobot_interface__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[46.645034] (-) TimerEvent: {}
+[46.747559] (-) TimerEvent: {}
+[46.851115] (-) TimerEvent: {}
+[46.954871] (-) TimerEvent: {}
+[46.974765] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/export_dobot_interface__rosidl_generator_pyExport.cmake\n'}
+[47.055426] (-) TimerEvent: {}
+[47.156959] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/export_dobot_interface__rosidl_generator_pyExport-noconfig.cmake\n'}
+[47.171154] (-) TimerEvent: {}
+[47.274265] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/rosidl_cmake-extras.cmake\n'}
+[47.283650] (-) TimerEvent: {}
+[47.381857] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[47.383688] (-) TimerEvent: {}
+[47.439902] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[47.483932] (-) TimerEvent: {}
+[47.525211] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[47.584289] (-) TimerEvent: {}
+[47.688120] (-) TimerEvent: {}
+[47.735768] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[47.788386] (-) TimerEvent: {}
+[47.890822] (-) TimerEvent: {}
+[47.938310] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[47.991126] (-) TimerEvent: {}
+[48.092640] (-) TimerEvent: {}
+[48.131304] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[48.192740] (-) TimerEvent: {}
+[48.295657] (-) TimerEvent: {}
+[48.404202] (-) TimerEvent: {}
+[48.439522] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/dobot_interfaceConfig.cmake\n'}
+[48.504431] (-) TimerEvent: {}
+[48.607266] (-) TimerEvent: {}
+[48.636566] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/cmake/dobot_interfaceConfig-version.cmake\n'}
+[48.707540] (-) TimerEvent: {}
+[48.815703] (-) TimerEvent: {}
+[48.912899] (dobot_interface) StdoutLine: {'line': b'-- Up-to-date: /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/share/dobot_interface/package.xml\n'}
+[48.915797] (-) TimerEvent: {}
+[48.958180] (dobot_interface) CommandEnded: {'returncode': 0}
+[49.016094] (-) TimerEvent: {}
+[49.118673] (-) TimerEvent: {}
+[49.219490] (-) TimerEvent: {}
+[49.321803] (-) TimerEvent: {}
+[49.425588] (-) TimerEvent: {}
+[49.530205] (-) TimerEvent: {}
+[49.633693] (-) TimerEvent: {}
+[49.737993] (-) TimerEvent: {}
+[49.839700] (-) TimerEvent: {}
+[49.943008] (-) TimerEvent: {}
+[50.044739] (-) TimerEvent: {}
+[50.147313] (-) TimerEvent: {}
+[50.251582] (-) TimerEvent: {}
+[50.355301] (-) TimerEvent: {}
+[50.463604] (-) TimerEvent: {}
+[50.569386] (-) TimerEvent: {}
+[50.674948] (-) TimerEvent: {}
+[50.777903] (-) TimerEvent: {}
+[50.880440] (-) TimerEvent: {}
+[50.986646] (-) TimerEvent: {}
+[51.088684] (-) TimerEvent: {}
+[51.194417] (-) TimerEvent: {}
+[51.296644] (-) TimerEvent: {}
+[51.403355] (-) TimerEvent: {}
+[51.506423] (-) TimerEvent: {}
+[51.608493] (-) TimerEvent: {}
+[51.713891] (-) TimerEvent: {}
+[51.817179] (-) TimerEvent: {}
+[51.922283] (-) TimerEvent: {}
+[52.028123] (-) TimerEvent: {}
+[52.134226] (-) TimerEvent: {}
+[52.236289] (-) TimerEvent: {}
+[52.342925] (-) TimerEvent: {}
+[52.445295] (-) TimerEvent: {}
+[52.549188] (-) TimerEvent: {}
+[52.650447] (-) TimerEvent: {}
+[52.753023] (-) TimerEvent: {}
+[52.859815] (-) TimerEvent: {}
+[52.963867] (-) TimerEvent: {}
+[53.071385] (-) TimerEvent: {}
+[53.174542] (-) TimerEvent: {}
+[53.276365] (-) TimerEvent: {}
+[53.382978] (-) TimerEvent: {}
+[53.483665] (-) TimerEvent: {}
+[53.588725] (-) TimerEvent: {}
+[53.692491] (-) TimerEvent: {}
+[53.797526] (-) TimerEvent: {}
+[53.906610] (-) TimerEvent: {}
+[54.013929] (-) TimerEvent: {}
+[54.116934] (-) TimerEvent: {}
+[54.221398] (-) TimerEvent: {}
+[54.324982] (-) TimerEvent: {}
+[54.429001] (-) TimerEvent: {}
+[54.532036] (-) TimerEvent: {}
+[54.636427] (-) TimerEvent: {}
+[54.739089] (-) TimerEvent: {}
+[54.843634] (-) TimerEvent: {}
+[54.945253] (-) TimerEvent: {}
+[55.047978] (-) TimerEvent: {}
+[55.149555] (-) TimerEvent: {}
+[55.252856] (-) TimerEvent: {}
+[55.362706] (-) TimerEvent: {}
+[55.465309] (-) TimerEvent: {}
+[55.567482] (-) TimerEvent: {}
+[55.672047] (-) TimerEvent: {}
+[55.775082] (-) TimerEvent: {}
+[55.884108] (-) TimerEvent: {}
+[55.987927] (-) TimerEvent: {}
+[56.094639] (-) TimerEvent: {}
+[56.197183] (-) TimerEvent: {}
+[56.301258] (-) TimerEvent: {}
+[56.404492] (-) TimerEvent: {}
+[56.506853] (-) TimerEvent: {}
+[56.610256] (-) TimerEvent: {}
+[56.713934] (-) TimerEvent: {}
+[56.817421] (-) TimerEvent: {}
+[56.919604] (-) TimerEvent: {}
+[57.022418] (-) TimerEvent: {}
+[57.125867] (-) TimerEvent: {}
+[57.226846] (-) TimerEvent: {}
+[57.327761] (-) TimerEvent: {}
+[57.428835] (-) TimerEvent: {}
+[57.532771] (-) TimerEvent: {}
+[57.633986] (-) TimerEvent: {}
+[57.737951] (-) TimerEvent: {}
+[57.848505] (-) TimerEvent: {}
+[57.952363] (-) TimerEvent: {}
+[58.056414] (-) TimerEvent: {}
+[58.159834] (-) TimerEvent: {}
+[58.263082] (-) TimerEvent: {}
+[58.365318] (-) TimerEvent: {}
+[58.469263] (-) TimerEvent: {}
+[58.571070] (-) TimerEvent: {}
+[58.672723] (-) TimerEvent: {}
+[58.781422] (-) TimerEvent: {}
+[58.884121] (-) TimerEvent: {}
+[58.985535] (-) TimerEvent: {}
+[59.086385] (-) TimerEvent: {}
+[59.190274] (-) TimerEvent: {}
+[59.291692] (-) TimerEvent: {}
+[59.392567] (-) TimerEvent: {}
+[59.493671] (-) TimerEvent: {}
+[59.596120] (-) TimerEvent: {}
+[59.700107] (-) TimerEvent: {}
+[59.806044] (-) TimerEvent: {}
+[59.909619] (-) TimerEvent: {}
+[60.012316] (-) TimerEvent: {}
+[60.114133] (-) TimerEvent: {}
+[60.216568] (-) TimerEvent: {}
+[60.319011] (-) TimerEvent: {}
+[60.421322] (-) TimerEvent: {}
+[60.523068] (-) TimerEvent: {}
+[60.625256] (-) TimerEvent: {}
+[60.726035] (-) TimerEvent: {}
+[60.827086] (-) TimerEvent: {}
+[60.929203] (-) TimerEvent: {}
+[61.033250] (-) TimerEvent: {}
+[61.143823] (-) TimerEvent: {}
+[61.250520] (-) TimerEvent: {}
+[61.351710] (-) TimerEvent: {}
+[61.453726] (-) TimerEvent: {}
+[61.556756] (-) TimerEvent: {}
+[61.610054] (dobot_interface) JobEnded: {'identifier': 'dobot_interface', 'rc': 0}
+[61.670609] (-) TimerEvent: {}
+[61.674286] (dobot) JobStarted: {'identifier': 'dobot'}
+[61.770858] (-) TimerEvent: {}
+[61.873001] (-) TimerEvent: {}
+[61.974897] (-) TimerEvent: {}
+[62.076772] (-) TimerEvent: {}
+[62.179871] (-) TimerEvent: {}
+[62.280836] (-) TimerEvent: {}
+[62.384079] (-) TimerEvent: {}
+[62.485203] (-) TimerEvent: {}
+[62.585790] (-) TimerEvent: {}
+[62.686820] (-) TimerEvent: {}
+[62.795765] (-) TimerEvent: {}
+[62.897025] (-) TimerEvent: {}
+[62.997953] (-) TimerEvent: {}
+[63.099063] (-) TimerEvent: {}
+[63.203369] (-) TimerEvent: {}
+[63.307051] (-) TimerEvent: {}
+[63.408742] (-) TimerEvent: {}
+[63.509815] (-) TimerEvent: {}
+[63.611808] (-) TimerEvent: {}
+[63.716851] (-) TimerEvent: {}
+[63.824857] (-) TimerEvent: {}
+[63.927172] (-) TimerEvent: {}
+[64.028479] (-) TimerEvent: {}
+[64.129931] (-) TimerEvent: {}
+[64.231369] (-) TimerEvent: {}
+[64.333282] (-) TimerEvent: {}
+[64.435158] (-) TimerEvent: {}
+[64.538483] (-) TimerEvent: {}
+[64.642258] (-) TimerEvent: {}
+[64.745231] (-) TimerEvent: {}
+[64.850875] (-) TimerEvent: {}
+[64.951980] (-) TimerEvent: {}
+[65.053682] (-) TimerEvent: {}
+[65.157951] (-) TimerEvent: {}
+[65.258553] (-) TimerEvent: {}
+[65.361780] (-) TimerEvent: {}
+[65.463835] (-) TimerEvent: {}
+[65.568043] (-) TimerEvent: {}
+[65.673954] (-) TimerEvent: {}
+[65.775226] (-) TimerEvent: {}
+[65.879244] (-) TimerEvent: {}
+[65.981641] (-) TimerEvent: {}
+[66.087695] (-) TimerEvent: {}
+[66.188924] (-) TimerEvent: {}
+[66.299472] (-) TimerEvent: {}
+[66.401680] (-) TimerEvent: {}
+[66.503399] (-) TimerEvent: {}
+[66.607294] (-) TimerEvent: {}
+[66.712379] (-) TimerEvent: {}
+[66.819377] (-) TimerEvent: {}
+[66.921560] (-) TimerEvent: {}
+[67.022492] (-) TimerEvent: {}
+[67.123886] (-) TimerEvent: {}
+[67.224726] (-) TimerEvent: {}
+[67.328162] (-) TimerEvent: {}
+[67.430925] (-) TimerEvent: {}
+[67.532513] (-) TimerEvent: {}
+[67.633829] (-) TimerEvent: {}
+[67.739793] (-) TimerEvent: {}
+[67.843853] (-) TimerEvent: {}
+[67.959478] (-) TimerEvent: {}
+[68.061316] (-) TimerEvent: {}
+[68.164676] (-) TimerEvent: {}
+[68.266610] (-) TimerEvent: {}
+[68.367580] (-) TimerEvent: {}
+[68.471115] (-) TimerEvent: {}
+[68.574337] (-) TimerEvent: {}
+[68.676719] (-) TimerEvent: {}
+[68.778864] (-) TimerEvent: {}
+[68.882332] (-) TimerEvent: {}
+[68.983738] (-) TimerEvent: {}
+[69.085630] (-) TimerEvent: {}
+[69.190941] (-) TimerEvent: {}
+[69.293584] (-) TimerEvent: {}
+[69.396541] (-) TimerEvent: {}
+[69.498467] (-) TimerEvent: {}
+[69.601702] (-) TimerEvent: {}
+[69.707791] (-) TimerEvent: {}
+[69.810507] (-) TimerEvent: {}
+[69.911875] (-) TimerEvent: {}
+[70.022603] (-) TimerEvent: {}
+[70.128789] (-) TimerEvent: {}
+[70.235052] (-) TimerEvent: {}
+[70.337051] (-) TimerEvent: {}
+[70.438640] (-) TimerEvent: {}
+[70.540851] (-) TimerEvent: {}
+[70.642736] (-) TimerEvent: {}
+[70.744888] (-) TimerEvent: {}
+[70.846152] (-) TimerEvent: {}
+[70.947335] (-) TimerEvent: {}
+[71.051559] (-) TimerEvent: {}
+[71.153598] (-) TimerEvent: {}
+[71.255812] (-) TimerEvent: {}
+[71.357967] (-) TimerEvent: {}
+[71.460587] (-) TimerEvent: {}
+[71.563263] (-) TimerEvent: {}
+[71.666253] (-) TimerEvent: {}
+[71.768009] (-) TimerEvent: {}
+[71.869626] (-) TimerEvent: {}
+[71.973490] (-) TimerEvent: {}
+[72.074410] (-) TimerEvent: {}
+[72.176668] (-) TimerEvent: {}
+[72.278170] (-) TimerEvent: {}
+[72.379427] (-) TimerEvent: {}
+[72.481298] (-) TimerEvent: {}
+[72.593988] (-) TimerEvent: {}
+[72.696448] (-) TimerEvent: {}
+[72.800550] (-) TimerEvent: {}
+[72.902793] (-) TimerEvent: {}
+[73.006246] (-) TimerEvent: {}
+[73.110901] (-) TimerEvent: {}
+[73.215367] (-) TimerEvent: {}
+[73.318684] (-) TimerEvent: {}
+[73.420497] (-) TimerEvent: {}
+[73.522673] (-) TimerEvent: {}
+[73.623989] (-) TimerEvent: {}
+[73.724775] (-) TimerEvent: {}
+[73.830196] (-) TimerEvent: {}
+[73.939221] (-) TimerEvent: {}
+[74.043452] (-) TimerEvent: {}
+[74.146721] (-) TimerEvent: {}
+[74.248385] (-) TimerEvent: {}
+[74.354203] (-) TimerEvent: {}
+[74.458723] (-) TimerEvent: {}
+[74.560592] (-) TimerEvent: {}
+[74.663878] (-) TimerEvent: {}
+[74.764393] (-) TimerEvent: {}
+[74.866648] (-) TimerEvent: {}
+[74.969608] (-) TimerEvent: {}
+[75.071859] (-) TimerEvent: {}
+[75.177178] (-) TimerEvent: {}
+[75.280462] (-) TimerEvent: {}
+[75.382162] (-) TimerEvent: {}
+[75.484453] (-) TimerEvent: {}
+[75.587484] (-) TimerEvent: {}
+[75.688846] (-) TimerEvent: {}
+[75.794873] (-) TimerEvent: {}
+[75.898691] (-) TimerEvent: {}
+[76.004443] (-) TimerEvent: {}
+[76.107740] (-) TimerEvent: {}
+[76.209058] (-) TimerEvent: {}
+[76.312846] (-) TimerEvent: {}
+[76.414015] (-) TimerEvent: {}
+[76.515940] (-) TimerEvent: {}
+[76.619276] (-) TimerEvent: {}
+[76.727814] (-) TimerEvent: {}
+[76.833010] (-) TimerEvent: {}
+[76.935393] (-) TimerEvent: {}
+[77.042323] (-) TimerEvent: {}
+[77.146143] (-) TimerEvent: {}
+[77.249473] (-) TimerEvent: {}
+[77.353133] (-) TimerEvent: {}
+[77.454233] (-) TimerEvent: {}
+[77.554982] (-) TimerEvent: {}
+[77.655974] (-) TimerEvent: {}
+[77.757222] (-) TimerEvent: {}
+[77.860754] (-) TimerEvent: {}
+[77.962884] (-) TimerEvent: {}
+[78.064878] (-) TimerEvent: {}
+[78.170587] (-) TimerEvent: {}
+[78.275358] (-) TimerEvent: {}
+[78.378330] (-) TimerEvent: {}
+[78.479427] (-) TimerEvent: {}
+[78.580807] (-) TimerEvent: {}
+[78.683712] (-) TimerEvent: {}
+[78.787277] (-) TimerEvent: {}
+[78.893046] (-) TimerEvent: {}
+[78.996436] (-) TimerEvent: {}
+[79.098418] (-) TimerEvent: {}
+[79.203754] (-) TimerEvent: {}
+[79.313448] (-) TimerEvent: {}
+[79.415994] (-) TimerEvent: {}
+[79.516921] (-) TimerEvent: {}
+[79.620230] (-) TimerEvent: {}
+[79.722570] (-) TimerEvent: {}
+[79.824116] (-) TimerEvent: {}
+[79.926851] (-) TimerEvent: {}
+[80.029123] (-) TimerEvent: {}
+[80.134365] (-) TimerEvent: {}
+[80.236947] (-) TimerEvent: {}
+[80.341698] (-) TimerEvent: {}
+[80.446173] (-) TimerEvent: {}
+[80.552100] (-) TimerEvent: {}
+[80.654496] (-) TimerEvent: {}
+[80.755098] (-) TimerEvent: {}
+[80.861603] (-) TimerEvent: {}
+[80.968768] (-) TimerEvent: {}
+[81.070600] (-) TimerEvent: {}
+[81.172297] (-) TimerEvent: {}
+[81.273315] (-) TimerEvent: {}
+[81.374645] (-) TimerEvent: {}
+[81.476140] (-) TimerEvent: {}
+[81.581603] (-) TimerEvent: {}
+[81.689848] (-) TimerEvent: {}
+[81.792554] (-) TimerEvent: {}
+[81.895934] (-) TimerEvent: {}
+[81.997211] (-) TimerEvent: {}
+[82.004847] (dobot) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/dobot', 'build', '--build-base', '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build', 'install', '--record', '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/src/dobot', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'yasiru', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib:/opt/ros/kilted/opt/gz_math_vendor/lib:/opt/ros/kilted/opt/gz_utils_vendor/lib:/opt/ros/kilted/opt/rviz_ogre_vendor/lib:/opt/ros/kilted/lib/x86_64-linux-gnu:/opt/ros/kilted/opt/gz_cmake_vendor/lib:/opt/ros/kilted/lib', 'WT_PROFILE_ID': '{61c54bbd-c2c6-5271-96e7-009a87ff44bf}', 'HOME': '/home/yasiru', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'kilted', 'LOGNAME': 'yasiru', 'NAME': 'DESKTOP-Q4KDUO9', 'WSL_INTEROP': '/run/WSL/355_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/home/yasiru/.local/bin:/opt/ros/kilted/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Microsoft/jdk-21.0.10.7-hotspot/bin:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/MinGW/bin:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/GitHub CLI/:/mnt/c/Program Files (x86)/cloudflared/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Common Files/Autodesk Shared/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/Cloudflare/Cloudflare WARP/:/mnt/c/Strawberry/c/bin:/mnt/c/Strawberry/perl/site/bin:/mnt/c/Strawberry/perl/bin:/mnt/c/Program Files/usbipd-win/:/mnt/c/Program Files/Go/bin:/mnt/c/Users/U S E R/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/U S E R/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/U S E R/AppData/Local/Programs/Python/Launcher/:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/MinGW/bin:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files (x86)/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/160/DTS/Binn/:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/GitHub CLI/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files (x86)/cloudflared/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Common Files/Autodesk Shared/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files/Cloudflare/Cloudflare WARP/:/mnt/c/Strawbe:/mnt/c/Users/U S E R/AppData/Roaming/npm:/mnt/c/Users/U S E R/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/U S E R/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/U S E R/AppData/Local/Programs/Ollama:/mnt/c/Users/U S E R/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/U S E R/go/bin:/snap/bin', 'WT_SESSION': '8f4d5b4c-6cad-4f25-99c8-884352efd3dc', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface:/opt/ros/kilted', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages:/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages:/opt/ros/kilted/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface:/opt/ros/kilted/opt/gz_math_vendor:/opt/ros/kilted/opt/gz_utils_vendor:/opt/ros/kilted/opt/gz_cmake_vendor', 'WSLENV': 'WT_SESSION:WT_PROFILE_ID:'}, 'shell': False}
+[82.097506] (-) TimerEvent: {}
+[82.200145] (-) TimerEvent: {}
+[82.301152] (-) TimerEvent: {}
+[82.403655] (-) TimerEvent: {}
+[82.508385] (-) TimerEvent: {}
+[82.610653] (-) TimerEvent: {}
+[82.712537] (-) TimerEvent: {}
+[82.813661] (-) TimerEvent: {}
+[82.914944] (-) TimerEvent: {}
+[83.017580] (-) TimerEvent: {}
+[83.118155] (-) TimerEvent: {}
+[83.224538] (-) TimerEvent: {}
+[83.327602] (-) TimerEvent: {}
+[83.430253] (-) TimerEvent: {}
+[83.532065] (-) TimerEvent: {}
+[83.635052] (-) TimerEvent: {}
+[83.737426] (-) TimerEvent: {}
+[83.838317] (-) TimerEvent: {}
+[83.941003] (-) TimerEvent: {}
+[84.043573] (-) TimerEvent: {}
+[84.147959] (-) TimerEvent: {}
+[84.248964] (-) TimerEvent: {}
+[84.350972] (-) TimerEvent: {}
+[84.455577] (-) TimerEvent: {}
+[84.564448] (-) TimerEvent: {}
+[84.666249] (-) TimerEvent: {}
+[84.769067] (-) TimerEvent: {}
+[84.870751] (-) TimerEvent: {}
+[84.976414] (-) TimerEvent: {}
+[85.078906] (-) TimerEvent: {}
+[85.183776] (-) TimerEvent: {}
+[85.293743] (-) TimerEvent: {}
+[85.395705] (-) TimerEvent: {}
+[85.497787] (-) TimerEvent: {}
+[85.600141] (-) TimerEvent: {}
+[85.701004] (-) TimerEvent: {}
+[85.808048] (-) TimerEvent: {}
+[85.909111] (-) TimerEvent: {}
+[86.010294] (-) TimerEvent: {}
+[86.112633] (-) TimerEvent: {}
+[86.213529] (-) TimerEvent: {}
+[86.314750] (-) TimerEvent: {}
+[86.417091] (-) TimerEvent: {}
+[86.518363] (-) TimerEvent: {}
+[86.620486] (-) TimerEvent: {}
+[86.721837] (-) TimerEvent: {}
+[86.824041] (-) TimerEvent: {}
+[86.924881] (-) TimerEvent: {}
+[87.029447] (-) TimerEvent: {}
+[87.130844] (-) TimerEvent: {}
+[87.231510] (-) TimerEvent: {}
+[87.334382] (-) TimerEvent: {}
+[87.439319] (-) TimerEvent: {}
+[87.540506] (-) TimerEvent: {}
+[87.640970] (-) TimerEvent: {}
+[87.741938] (-) TimerEvent: {}
+[87.848143] (-) TimerEvent: {}
+[87.899744] (dobot) StdoutLine: {'line': b'running egg_info\n'}
+[87.948272] (-) TimerEvent: {}
+[88.053682] (-) TimerEvent: {}
+[88.080232] (dobot) StdoutLine: {'line': b'writing ../../build/dobot/dobot.egg-info/PKG-INFO\n'}
+[88.098389] (dobot) StdoutLine: {'line': b'writing dependency_links to ../../build/dobot/dobot.egg-info/dependency_links.txt\n'}
+[88.108973] (dobot) StdoutLine: {'line': b'writing entry points to ../../build/dobot/dobot.egg-info/entry_points.txt\n'}
+[88.128091] (dobot) StdoutLine: {'line': b'writing requirements to ../../build/dobot/dobot.egg-info/requires.txt\n'}
+[88.153869] (-) TimerEvent: {}
+[88.156934] (dobot) StdoutLine: {'line': b'writing top-level names to ../../build/dobot/dobot.egg-info/top_level.txt\n'}
+[88.254014] (-) TimerEvent: {}
+[88.359569] (-) TimerEvent: {}
+[88.460362] (-) TimerEvent: {}
+[88.564270] (-) TimerEvent: {}
+[88.665029] (-) TimerEvent: {}
+[88.770001] (-) TimerEvent: {}
+[88.868768] (dobot) StdoutLine: {'line': b"reading manifest file '../../build/dobot/dobot.egg-info/SOURCES.txt'\n"}
+[88.871359] (-) TimerEvent: {}
+[88.972177] (-) TimerEvent: {}
+[89.073741] (-) TimerEvent: {}
+[89.176758] (-) TimerEvent: {}
+[89.278883] (-) TimerEvent: {}
+[89.384173] (-) TimerEvent: {}
+[89.439707] (dobot) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[89.484289] (-) TimerEvent: {}
+[89.545908] (dobot) StdoutLine: {'line': b"writing manifest file '../../build/dobot/dobot.egg-info/SOURCES.txt'\n"}
+[89.563049] (dobot) StdoutLine: {'line': b'running build\n'}
+[89.566597] (dobot) StdoutLine: {'line': b'running build_py\n'}
+[89.584412] (-) TimerEvent: {}
+[89.685569] (-) TimerEvent: {}
+[89.789565] (-) TimerEvent: {}
+[89.892148] (-) TimerEvent: {}
+[89.915919] (dobot) StdoutLine: {'line': b'copying dobot/homing_node.py -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build/lib/dobot\n'}
+[89.992325] (-) TimerEvent: {}
+[90.096191] (-) TimerEvent: {}
+[90.197032] (-) TimerEvent: {}
+[90.303185] (-) TimerEvent: {}
+[90.407977] (-) TimerEvent: {}
+[90.509618] (-) TimerEvent: {}
+[90.550764] (dobot) StdoutLine: {'line': b'copying dobot/suction_cup_node.py -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build/lib/dobot\n'}
+[90.609684] (-) TimerEvent: {}
+[90.712394] (-) TimerEvent: {}
+[90.813357] (dobot) StdoutLine: {'line': b'running install\n'}
+[90.814344] (-) TimerEvent: {}
+[90.828676] (dobot) StdoutLine: {'line': b'running install_lib\n'}
+[90.914461] (-) TimerEvent: {}
+[91.015794] (-) TimerEvent: {}
+[91.116354] (-) TimerEvent: {}
+[91.136994] (dobot) StdoutLine: {'line': b'copying /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build/lib/dobot/homing_node.py -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages/dobot\n'}
+[91.216530] (-) TimerEvent: {}
+[91.317348] (-) TimerEvent: {}
+[91.417960] (-) TimerEvent: {}
+[91.520197] (-) TimerEvent: {}
+[91.603078] (dobot) StdoutLine: {'line': b'copying /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build/lib/dobot/suction_cup_node.py -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages/dobot\n'}
+[91.620276] (-) TimerEvent: {}
+[91.720684] (-) TimerEvent: {}
+[91.821362] (-) TimerEvent: {}
+[91.922992] (-) TimerEvent: {}
+[92.025394] (-) TimerEvent: {}
+[92.040509] (dobot) StdoutLine: {'line': b'byte-compiling /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages/dobot/homing_node.py to homing_node.cpython-312.pyc\n'}
+[92.125480] (-) TimerEvent: {}
+[92.227962] (-) TimerEvent: {}
+[92.329789] (-) TimerEvent: {}
+[92.411372] (dobot) StdoutLine: {'line': b'byte-compiling /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages/dobot/suction_cup_node.py to suction_cup_node.cpython-312.pyc\n'}
+[92.429930] (-) TimerEvent: {}
+[92.530592] (-) TimerEvent: {}
+[92.567597] (dobot) StdoutLine: {'line': b'running install_data\n'}
+[92.630712] (-) TimerEvent: {}
+[92.682368] (dobot) StdoutLine: {'line': b'copying launch/dobot_launch.xml -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/share/dobot/launch\n'}
+[92.730805] (-) TimerEvent: {}
+[92.831802] (-) TimerEvent: {}
+[92.836519] (dobot) StdoutLine: {'line': b'running install_egg_info\n'}
+[92.927810] (dobot) StdoutLine: {'line': b"removing '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages/dobot-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[92.931849] (-) TimerEvent: {}
+[93.032271] (-) TimerEvent: {}
+[93.132890] (-) TimerEvent: {}
+[93.187439] (dobot) StdoutLine: {'line': b'Copying ../../build/dobot/dobot.egg-info to /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages/dobot-0.0.0-py3.12.egg-info\n'}
+[93.232990] (-) TimerEvent: {}
+[93.334154] (-) TimerEvent: {}
+[93.434650] (-) TimerEvent: {}
+[93.537604] (-) TimerEvent: {}
+[93.638417] (-) TimerEvent: {}
+[93.738790] (-) TimerEvent: {}
+[93.821526] (dobot) StdoutLine: {'line': b'running install_scripts\n'}
+[93.839141] (-) TimerEvent: {}
+[93.940305] (-) TimerEvent: {}
+[94.041361] (-) TimerEvent: {}
+[94.142138] (-) TimerEvent: {}
+[94.242594] (-) TimerEvent: {}
+[94.343519] (-) TimerEvent: {}
+[94.444291] (-) TimerEvent: {}
+[94.547746] (-) TimerEvent: {}
+[94.648556] (-) TimerEvent: {}
+[94.751478] (-) TimerEvent: {}
+[94.852605] (-) TimerEvent: {}
+[94.926006] (dobot) StdoutLine: {'line': b'Installing cartesian_ptp_node script to /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/dobot\n'}
+[94.952789] (-) TimerEvent: {}
+[95.057393] (-) TimerEvent: {}
+[95.071222] (dobot) StdoutLine: {'line': b'Installing homing_node script to /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/dobot\n'}
+[95.157548] (-) TimerEvent: {}
+[95.186976] (dobot) StdoutLine: {'line': b'Installing joint_ptp_node script to /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/dobot\n'}
+[95.257729] (-) TimerEvent: {}
+[95.284394] (dobot) StdoutLine: {'line': b'Installing joint_state_node script to /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/dobot\n'}
+[95.357838] (-) TimerEvent: {}
+[95.439757] (dobot) StdoutLine: {'line': b'Installing keyboard_node script to /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/dobot\n'}
+[95.457955] (-) TimerEvent: {}
+[95.559097] (-) TimerEvent: {}
+[95.566018] (dobot) StdoutLine: {'line': b'Installing pick_and_place_node script to /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/dobot\n'}
+[95.659240] (-) TimerEvent: {}
+[95.692002] (dobot) StdoutLine: {'line': b'Installing suction_cup_node script to /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/dobot\n'}
+[95.751931] (dobot) StdoutLine: {'line': b"writing list of installed files to '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/install.log'\n"}
+[95.759391] (-) TimerEvent: {}
+[95.805651] (dobot) CommandEnded: {'returncode': 0}
+[95.859590] (-) TimerEvent: {}
+[95.962393] (-) TimerEvent: {}
+[96.064537] (-) TimerEvent: {}
+[96.167806] (-) TimerEvent: {}
+[96.278388] (-) TimerEvent: {}
+[96.381124] (-) TimerEvent: {}
+[96.481767] (-) TimerEvent: {}
+[96.585179] (-) TimerEvent: {}
+[96.685793] (-) TimerEvent: {}
+[96.789178] (-) TimerEvent: {}
+[96.890172] (-) TimerEvent: {}
+[96.991378] (-) TimerEvent: {}
+[97.096435] (-) TimerEvent: {}
+[97.197381] (-) TimerEvent: {}
+[97.300186] (-) TimerEvent: {}
+[97.401622] (-) TimerEvent: {}
+[97.503091] (-) TimerEvent: {}
+[97.603804] (-) TimerEvent: {}
+[97.705541] (-) TimerEvent: {}
+[97.806715] (-) TimerEvent: {}
+[97.910282] (-) TimerEvent: {}
+[98.018133] (-) TimerEvent: {}
+[98.076619] (dobot) JobEnded: {'identifier': 'dobot', 'rc': 0}
+[98.190730] (-) TimerEvent: {}
+[98.193455] (-) EventReactorShutdown: {}
