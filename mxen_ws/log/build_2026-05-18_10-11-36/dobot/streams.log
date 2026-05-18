@@ -1,0 +1,71 @@
+[5.377s] Invoking command in '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/src/dobot': AMENT_PREFIX_PATH=/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib:${LD_LIBRARY_PATH} PYTHONPATH=/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages:/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/dobot build --build-base /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build install --record /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/install.log --single-version-externally-managed install_data
+[6.658s] running egg_info
+[6.670s] creating ../../build/dobot/dobot.egg-info
+[6.696s] writing ../../build/dobot/dobot.egg-info/PKG-INFO
+[6.712s] writing dependency_links to ../../build/dobot/dobot.egg-info/dependency_links.txt
+[6.718s] writing entry points to ../../build/dobot/dobot.egg-info/entry_points.txt
+[6.723s] writing requirements to ../../build/dobot/dobot.egg-info/requires.txt
+[6.750s] writing top-level names to ../../build/dobot/dobot.egg-info/top_level.txt
+[6.810s] writing manifest file '../../build/dobot/dobot.egg-info/SOURCES.txt'
+[6.921s] reading manifest file '../../build/dobot/dobot.egg-info/SOURCES.txt'
+[6.955s] adding license file 'LICENSE'
+[6.991s] writing manifest file '../../build/dobot/dobot.egg-info/SOURCES.txt'
+[6.994s] running build
+[6.995s] running build_py
+[7.045s] creating /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build
+[7.053s] creating /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build/lib
+[7.054s] creating /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build/lib/dobot
+[7.055s] copying dobot/cartesian_ptp_node.py -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build/lib/dobot
+[7.136s] copying dobot/dobot_client.py -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build/lib/dobot
+[7.194s] copying dobot/dobot_kinematics.py -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build/lib/dobot
+[7.240s] copying dobot/homing_node.py -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build/lib/dobot
+[7.337s] copying dobot/joint_ptp_node.py -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build/lib/dobot
+[7.476s] copying dobot/joint_state_node.py -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build/lib/dobot
+[7.627s] copying dobot/pick_and_place_node.py -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build/lib/dobot
+[7.773s] copying dobot/suction_cup_node.py -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build/lib/dobot
+[7.907s] copying dobot/__init__.py -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build/lib/dobot
+[7.958s] copying dobot/py.typed -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build/lib/dobot
+[7.979s] running install
+[7.991s] running install_lib
+[8.032s] creating /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages/dobot
+[8.058s] copying /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build/lib/dobot/cartesian_ptp_node.py -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages/dobot
+[8.095s] copying /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build/lib/dobot/dobot_client.py -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages/dobot
+[8.129s] copying /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build/lib/dobot/dobot_kinematics.py -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages/dobot
+[8.174s] copying /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build/lib/dobot/homing_node.py -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages/dobot
+[8.206s] copying /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build/lib/dobot/joint_ptp_node.py -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages/dobot
+[8.238s] copying /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build/lib/dobot/joint_state_node.py -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages/dobot
+[8.303s] copying /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build/lib/dobot/pick_and_place_node.py -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages/dobot
+[8.446s] copying /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build/lib/dobot/py.typed -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages/dobot
+[8.512s] copying /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build/lib/dobot/suction_cup_node.py -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages/dobot
+[8.625s] copying /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build/lib/dobot/__init__.py -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages/dobot
+[8.771s] byte-compiling /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages/dobot/cartesian_ptp_node.py to cartesian_ptp_node.cpython-312.pyc
+[8.835s] byte-compiling /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages/dobot/dobot_client.py to dobot_client.cpython-312.pyc
+[8.932s] byte-compiling /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages/dobot/dobot_kinematics.py to dobot_kinematics.cpython-312.pyc
+[9.225s] byte-compiling /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages/dobot/homing_node.py to homing_node.cpython-312.pyc
+[9.365s] byte-compiling /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages/dobot/joint_ptp_node.py to joint_ptp_node.cpython-312.pyc
+[9.546s] byte-compiling /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages/dobot/joint_state_node.py to joint_state_node.cpython-312.pyc
+[9.685s] byte-compiling /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages/dobot/pick_and_place_node.py to pick_and_place_node.cpython-312.pyc
+[9.811s] byte-compiling /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages/dobot/suction_cup_node.py to suction_cup_node.cpython-312.pyc
+[9.940s] byte-compiling /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages/dobot/__init__.py to __init__.cpython-312.pyc
+[10.036s] running install_data
+[10.056s] creating /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/share/ament_index
+[10.068s] creating /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/share/ament_index/resource_index
+[10.080s] creating /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/share/ament_index/resource_index/packages
+[10.111s] copying resource/dobot -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/share/ament_index/resource_index/packages
+[10.254s] copying package.xml -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/share/dobot
+[10.329s] creating /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/share/dobot/launch
+[10.345s] copying launch/dobot_launch.xml -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/share/dobot/launch
+[10.388s] creating /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/share/dobot/resource
+[10.412s] copying resource/dobot_server.py -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/share/dobot/resource
+[10.543s] copying resource/dobot_driver.py -> /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/share/dobot/resource
+[10.614s] running install_egg_info
+[10.731s] Copying ../../build/dobot/dobot.egg-info to /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages/dobot-0.0.0-py3.12.egg-info
+[11.223s] running install_scripts
+[12.146s] Installing cartesian_ptp_node script to /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/dobot
+[12.224s] Installing homing_node script to /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/dobot
+[12.259s] Installing joint_ptp_node script to /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/dobot
+[12.287s] Installing joint_state_node script to /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/dobot
+[12.308s] Installing pick_and_place_node script to /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/dobot
+[12.368s] Installing suction_cup_node script to /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/dobot
+[12.445s] writing list of installed files to '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/install.log'
+[12.477s] Invoked command in '/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/src/dobot' returned '0': AMENT_PREFIX_PATH=/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib:${LD_LIBRARY_PATH} PYTHONPATH=/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot/lib/python3.12/site-packages:/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/install/dobot_interface/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/dobot build --build-base /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/build install --record /mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/build/dobot/install.log --single-version-externally-managed install_data
