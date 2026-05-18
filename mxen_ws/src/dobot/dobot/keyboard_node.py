@@ -10,6 +10,17 @@ import math
 from .keyboard import Keyboard
 from dobot_interface.action import JointPTP, PosePTP
 
+motion_map = {
+                #  key          axis  direction
+                "KEY_LEFT":  (0, +1),  # j1 / y  +
+                "KEY_RIGHT": (0, -1),  # j1 / y  -
+                "KEY_UP":    (1, +1),  # j2 / x  +
+                "KEY_DOWN":  (1, -1),  # j2 / x  -
+                "KEY_W":     (2, +1),  # j3 / z  +
+                "KEY_S":     (2, -1),  # j3 / z  -
+                "KEY_A":     (3, +1),  # j4 / r  +
+                "KEY_D":     (3, -1),  # j4 / r  -
+            }
 
 class KeyboardNode(Node):
 
@@ -144,17 +155,7 @@ class KeyboardNode(Node):
                 return
 
             # Motion keys — track press/release for continuous motion
-            motion_map = {
-                #  key          axis  direction
-                "KEY_LEFT":  (0, +1),  # j1 / y  +
-                "KEY_RIGHT": (0, -1),  # j1 / y  -
-                "KEY_UP":    (1, +1),  # j2 / x  +
-                "KEY_DOWN":  (1, -1),  # j2 / x  -
-                "KEY_W":     (2, +1),  # j3 / z  +
-                "KEY_S":     (2, -1),  # j3 / z  -
-                "KEY_A":     (3, +1),  # j4 / r  +
-                "KEY_D":     (3, -1),  # j4 / r  -
-            }
+           
 
             if keycode in motion_map:
                 if keystate == KEY_DOWN:
