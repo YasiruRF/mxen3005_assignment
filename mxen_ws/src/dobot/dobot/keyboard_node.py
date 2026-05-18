@@ -9,6 +9,7 @@ import math
 
 from .keyboard import Keyboard
 from dobot_interface.action import JointPTP, PosePTP
+from dobot_interface.srv import PickAndPlace
 
 motion_map = {
                 #  key          axis  direction
@@ -34,6 +35,7 @@ class KeyboardNode(Node):
 
         # The key currently held down (for continuous motion)
         self.active_motion_key = None
+        self.motion_goal_in_flight = False
         self.step = 1.0  # degrees (joint) or mm (cartesian)
 
         # Working goals — seeded from live robot state via subscriptions
@@ -65,7 +67,7 @@ class KeyboardNode(Node):
         # ── Service clients ────────────────────────────────────────────
         self.homing_client  = self.create_client(Trigger, "homing")
         self.suction_client = self.create_client(Trigger, "suction_cup")
-        self.pick_and_place_client = self.create_client(Trigger, "pick_and_place")
+        self.pick_and_place_client = self.create_client(PickAndPlace, "pick_and_place")
 
         # ── 20 Hz keyboard poll timer ──────────────────────────────────
         self.timer = self.create_timer(0.05, self.timer_callback)
@@ -153,27 +155,25 @@ class KeyboardNode(Node):
                     return
                 
                 if keycode == "KEY_P":
-                    self.call_trigger(self.pick_and_place_client, "pick_and_place")
+                    self.call_pick_and_place_service()
                     return
 
             if not self.keyboard_enabled:
                 return
 
             # Motion keys — track press/release for continuous motion
-           
-
             if keycode in motion_map:
                 if keystate == KEY_DOWN:
                     self.active_motion_key = keycode
+                    self.send_next_motion_step()
                 elif keystate == KEY_UP:
                     if self.active_motion_key == keycode:
                         self.active_motion_key = None
                 return
 
-        # ── Repeat motion while key is held ───────────────────────────
+        # ── Keep motion going only when the current goal finishes ─────
         if self.keyboard_enabled and self.active_motion_key is not None:
-            axis, direction = motion_map[self.active_motion_key]
-            self.apply_step(axis, direction)
+            self.send_next_motion_step()
 
     # ------------------------------------------------------------------ #
     #  Step application                                                    #
@@ -199,6 +199,17 @@ class KeyboardNode(Node):
             )
             self.send_joint_goal()
 
+    def send_next_motion_step(self):
+        if not self.keyboard_enabled or self.active_motion_key is None:
+            return
+
+        if self.motion_goal_in_flight:
+            return
+
+        axis, direction = motion_map[self.active_motion_key]
+        self.motion_goal_in_flight = True
+        self.apply_step(axis, direction)
+
     # ------------------------------------------------------------------ #
     #  Action goal senders                                                 #
     # ------------------------------------------------------------------ #
@@ -206,26 +217,45 @@ class KeyboardNode(Node):
     def send_joint_goal(self):
         if not self.joint_client.wait_for_server(timeout_sec=0.1):
             self.get_logger().warn("JointPTP action server not available")
+            self.motion_goal_in_flight = False
             return
 
         goal = JointPTP.Goal()
-        goal.joint_goal = self.joint_goal
-        self.joint_client.send_goal_async(
+        goal.joint_goal = list(self.joint_goal)
+        future = self.joint_client.send_goal_async(
             goal,
             feedback_callback=self.joint_feedback_callback,
         )
+        future.add_done_callback(self.motion_goal_response_callback)
 
     def send_cartesian_goal(self):
         if not self.pose_client.wait_for_server(timeout_sec=0.1):
             self.get_logger().warn("PosePTP action server not available")
+            self.motion_goal_in_flight = False
             return
 
         goal = PosePTP.Goal()
-        goal.pose_goal = self.pose_goal
-        self.pose_client.send_goal_async(
+        goal.pose_goal = list(self.pose_goal)
+        future = self.pose_client.send_goal_async(
             goal,
             feedback_callback=self.cartesian_feedback_callback,
         )
+        future.add_done_callback(self.motion_goal_response_callback)
+
+    def motion_goal_response_callback(self, future):
+        goal_handle = future.result()
+
+        if goal_handle is None or not goal_handle.accepted:
+            self.motion_goal_in_flight = False
+            return
+
+        goal_handle.get_result_async().add_done_callback(self.motion_goal_result_callback)
+
+    def motion_goal_result_callback(self, future):
+        self.motion_goal_in_flight = False
+
+        if self.keyboard_enabled and self.active_motion_key is not None:
+            self.send_next_motion_step()
 
     # ------------------------------------------------------------------ #
     #  Feedback callbacks                                                  #
@@ -237,7 +267,7 @@ class KeyboardNode(Node):
 
     def cartesian_feedback_callback(self, feedback_handle):
         fb = feedback_handle.feedback
-        self.get_logger().debug(f"Cartesian feedback: {fb.present_pose}")
+        self.get_logger().debug(f"Cartesian feedback: {fb.pose_present}")
 
     # ------------------------------------------------------------------ #
     #  Service helper                                                      #
@@ -250,6 +280,22 @@ class KeyboardNode(Node):
         future = client.call_async(Trigger.Request())
         future.add_done_callback(
             lambda f: self.get_logger().info(f"{name}: {f.result().message}")
+        )
+
+    def call_pick_and_place_service(self):
+        if not self.pick_and_place_client.wait_for_service(timeout_sec=0.5):
+            self.get_logger().warn("Pick-and-place service not available")
+            return
+        
+        request = PickAndPlace.Request()
+        request.pick_pose = [92.0, -201.0, 60.0, 0.0]
+        request.place_pose = [135.0, 226.0, 60.0, 0.0]
+        
+        future = self.pick_and_place_client.call_async(request)
+        future.add_done_callback(
+            lambda f: self.get_logger().info(
+                f"Pick-and-place: {f.result().message}"
+            )
         )
 
 

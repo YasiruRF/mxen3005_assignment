@@ -20,11 +20,11 @@ def inverse_kinematics(x, y, z, r):
     d = math.sqrt(x**2 + y**2) - L4
     h = z + L5 - L0 - L1
     c = math.sqrt(d**2 + h**2)
-    alpha = math.arctan(d/h)
+    alpha = math.atan(d/h)
 
-    theta1 = math.arctan(y/x)
-    theta2 = alpha - math.arccos((L2**2 + c**2 - L3**2) / (2 * L2 * c))
-    theta3 = math.arcsin((L2**2 + L3**2 - c**2) / (2 * L2 * L3))
+    theta1 = math.atan(y/x)
+    theta2 = alpha - math.acos((L2**2 + c**2 - L3**2) / (2 * L2 * c))
+    theta3 = math.asin((L2**2 + L3**2 - c**2) / (2 * L2 * L3))
     theta4 = r - theta1
 
     return theta1, theta2, theta3, theta4

@@ -8,7 +8,7 @@ from rclpy.executors import MultiThreadedExecutor
 from rclpy.node import Node
 
 from dobot_interface.action import JointPTP
-from .dobot_client import DobotDriver
+from .dobot_client import DobotClient
 
 class JointPTPNode(Node):
 
@@ -18,7 +18,7 @@ class JointPTPNode(Node):
         self.goal_lock = threading.Lock()
         
         try:
-            self.dobot = DobotDriver()
+            self.dobot = DobotClient()
         except SystemExit:
             self.get_logger().error("Failed to connect to Dobot.")
             raise

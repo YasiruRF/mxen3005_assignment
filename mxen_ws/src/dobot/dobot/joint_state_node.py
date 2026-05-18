@@ -6,7 +6,7 @@ from rclpy.node import Node
 from geometry_msgs.msg import Pose
 from sensor_msgs.msg import JointState
 
-from .dobot_client import DobotClient, DobotDriver
+from .dobot_client import DobotClient, DobotClient
 from .dobot_kinematics import forward_kinematics
 
 

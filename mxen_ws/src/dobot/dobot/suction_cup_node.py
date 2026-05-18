@@ -1,7 +1,7 @@
 import rclpy
 from rclpy.node import Node
 from std_srvs.srv import Trigger
-from dobot_client import DobotClient
+from .dobot_client import DobotClient
 
 class SuctionCup(Node):
 

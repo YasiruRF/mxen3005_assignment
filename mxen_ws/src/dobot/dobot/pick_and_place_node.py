@@ -1,5 +1,3 @@
-from urllib import response
-
 import rclpy
 from rclpy.node import Node
 from .dobot_client import DobotClient
@@ -45,7 +43,7 @@ class PickAndPlaceNode(Node):
         theta1, theta2, theta3, theta4 = self.pose_to_joints(x, y, z, r)
         return self.dobot.is_goal_valid(theta1, theta2, theta3, theta4)
 
-    def service_callback(self, response):
+    def service_callback(self, request, response):
 
         if not self.goal_valid(px, py, pz, pr):
             response.success = False
