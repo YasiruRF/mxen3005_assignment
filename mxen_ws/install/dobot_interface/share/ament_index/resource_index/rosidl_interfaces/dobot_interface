@@ -1,6 +1,0 @@
-action/JointPTP.action
-action/JointPTP.idl
-action/PosePTP.action
-action/PosePTP.idl
-srv/PickAndPlace.idl
-srv/PickAndPlace.srv

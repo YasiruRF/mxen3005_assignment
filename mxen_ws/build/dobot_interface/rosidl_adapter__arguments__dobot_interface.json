@@ -1,8 +1,0 @@
-{
-  "package_name": "dobot_interface",
-  "non_idl_tuples": [
-    "/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/src/dobot_interface:action/JointPTP.action",
-    "/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/src/dobot_interface:action/PosePTP.action",
-    "/mnt/d/Curtin_Colombo/year_3/sem_1/mxen3005/assignment/mxen_ws/src/dobot_interface:srv/PickAndPlace.srv"
-  ]
-}
