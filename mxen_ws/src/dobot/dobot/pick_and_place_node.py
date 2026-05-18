@@ -65,7 +65,7 @@ class PickAndPlaceNode(Node):
                 f"Starting pick-and-place: "
                 f"pick=({px},{py},{pz},{pr})  place=({dx},{dy},{dz},{dr})"
             )
-            
+
             self.dobot = DobotClient()
 
             self.get_logger().info("Starting")
@@ -102,6 +102,7 @@ class PickAndPlaceNode(Node):
             self.dobot.set_joint_ptp(0, 0, 0, 0)
 
         except Exception as e:
+            self.dobot = None
             response.success = False
             response.message = f"Error during pick-and-place: {str(e)}"
             self.get_logger().error(response.message)
