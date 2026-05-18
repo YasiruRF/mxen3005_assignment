@@ -9,6 +9,16 @@ import time
 
 CLEARANCE_Z = 100.0
 
+px = 92
+py = -201
+pz = 60
+pr = 0
+
+dx = 135
+dy = 226
+dz = 60
+dr = 0
+
 
 class PickAndPlaceNode(Node):
 
@@ -32,9 +42,7 @@ class PickAndPlaceNode(Node):
         theta1, theta2, theta3, theta4 = self.pose_to_joints(x, y, z, r)
         return self.dobot.is_goal_valid(theta1, theta2, theta3, theta4)
 
-    def service_callback(self, request, response):
-        px, py, pz, pr = request.pick_pose
-        dx, dy, dz, dr = request.place_pose
+    def service_callback(self, response):
 
         if not self.goal_valid(px, py, pz, pr):
             response.success = False
@@ -59,10 +67,37 @@ class PickAndPlaceNode(Node):
             )
 
             self.get_logger().info("Starting")
-            theta1, theta2, theta3, theta4 = self.pose_to_joints(0, 207, 0, 203)
+            self.dobot.set_joint_ptp(0, 0, 0, 0)
+            time.sleep(0.5)
+
+            self.get_logger().info("Move 1")
+            theta1, theta2, theta3, theta4 = self.pose_to_joints(px, py, pz, pr)
             self.dobot.set_joint_ptp(theta1, theta2, theta3, theta4)
             time.sleep(0.5)
-            
+
+            self.get_logger().info("Move 2")
+            theta1, theta2, theta3, theta4 = self.pose_to_joints(px, py, pz + CLEARANCE_Z, pr)
+            self.dobot.set_joint_ptp(theta1, theta2, theta3, theta4)
+
+            self.get_logger().info("Move 3")
+            self.dobot.set_suction_cup(True)
+            time.sleep(0.5)
+
+            self.get_logger().info("Move 4")
+            theta1, theta2, theta3, theta4 = self.pose_to_joints(dx, dy, dz + CLEARANCE_Z, dr)
+            self.dobot.set_joint_ptp(theta1, theta2, theta3, theta4)
+
+            self.get_logger().info("Move 5")
+            theta1, theta2, theta3, theta4 = self.pose_to_joints(dx, dy, dz, dr)
+            self.dobot.set_joint_ptp(theta1, theta2, theta3, theta4)
+            time.sleep(0.5)
+
+            self.get_logger().info("Move 6")
+            self.dobot.set_suction_cup(False)
+            time.sleep(0.5)
+
+            self.get_logger().info("Move 7")
+            self.dobot.set_joint_ptp(0, 0, 0, 0)
 
         except Exception as e:
             response.success = False

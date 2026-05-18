@@ -65,6 +65,7 @@ class KeyboardNode(Node):
         # ── Service clients ────────────────────────────────────────────
         self.homing_client  = self.create_client(Trigger, "homing")
         self.suction_client = self.create_client(Trigger, "suction_cup")
+        self.pick_and_place_client = self.create_client(Trigger, "pick_and_place")
 
         # ── 20 Hz keyboard poll timer ──────────────────────────────────
         self.timer = self.create_timer(0.05, self.timer_callback)
@@ -149,6 +150,10 @@ class KeyboardNode(Node):
 
                 if keycode == "KEY_E":
                     self.call_trigger(self.suction_client, "suction_cup")
+                    return
+                
+                if keycode == "KEY_P":
+                    self.call_trigger(self.pick_and_place_client, "pick_and_place")
                     return
 
             if not self.keyboard_enabled:
