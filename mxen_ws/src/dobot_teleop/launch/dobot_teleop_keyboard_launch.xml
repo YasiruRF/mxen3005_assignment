@@ -1,6 +1,6 @@
 <launch>
 
 <node pkg="dobot_teleop" exec="keyboard_node"/>
-<node pkg="teleop_node" exec="teleop_node"/>
+<node pkg="dobot_teleop" exec="teleop_node"/>
 
 </launch>

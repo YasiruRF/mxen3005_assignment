@@ -6,7 +6,7 @@ from dobot_teleop.keyboard import Keyboard
 class KeyboardTeleopNode(Node):
 
     def __init__(self):
-        super().__init__("keyboard_teleop_node")
+        super().__init__("keyboard_node")
 
         self.kb = Keyboard()
 
@@ -16,6 +16,7 @@ class KeyboardTeleopNode(Node):
             10
         )
         self.keyboard_enabled = False
+        self.toggle_keys_pressed = set()  # Track which toggle keys are currently pressed
         self.timer = self.create_timer(0.05,self.timer_callback)
 
     def timer_callback(self):
@@ -84,16 +85,48 @@ class KeyboardTeleopNode(Node):
             msg.data = "RIGHT_UP"
 
         elif key == ('KEY_E', 1):
-            msg.data = "SUCTION_TOGGLE"
+            if 'KEY_E' not in self.toggle_keys_pressed:
+                msg.data = "SUCTION_TOGGLE"
+                self.toggle_keys_pressed.add('KEY_E')
+            else:
+                return
+
+        elif key == ('KEY_E', 0):
+            self.toggle_keys_pressed.discard('KEY_E')
+            return
 
         elif key == ('KEY_H', 1):
-            msg.data = "HOME"
+            if 'KEY_H' not in self.toggle_keys_pressed:
+                msg.data = "HOME"
+                self.toggle_keys_pressed.add('KEY_H')
+            else:
+                return
+
+        elif key == ('KEY_H', 0):
+            self.toggle_keys_pressed.discard('KEY_H')
+            return
 
         elif key == ('KEY_M', 1):
-            msg.data = "MODE_TOGGLE"
+            if 'KEY_M' not in self.toggle_keys_pressed:
+                msg.data = "MODE_TOGGLE"
+                self.toggle_keys_pressed.add('KEY_M')
+            else:
+                return
+
+        elif key == ('KEY_M', 0):
+            self.toggle_keys_pressed.discard('KEY_M')
+            return
 
         elif key == ('KEY_P', 1):
-            msg.data = "AUTO_STACK"
+            if 'KEY_P' not in self.toggle_keys_pressed:
+                msg.data = "AUTO_STACK"
+                self.toggle_keys_pressed.add('KEY_P')
+            else:
+                return
+
+        elif key == ('KEY_P', 0):
+            self.toggle_keys_pressed.discard('KEY_P')
+            return
 
         else:
             return

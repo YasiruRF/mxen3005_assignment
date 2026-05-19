@@ -19,7 +19,7 @@ class TeleopControlNode(Node):
 
     def __init__(self):
 
-        super().__init__("teleop_control_node")
+        super().__init__("teleop_node")
 
         self.dobot = DobotClient()
 
