@@ -5,6 +5,10 @@ import sys
 
 # Joint limits in degrees
 # Note: these limits are more conservative than in the Dobot documentation
+
+# x=0.0000, y=-201.9911, z=241.0464, r=-180.0000 min forward kinematics pose
+# x=0.0000, y=113.3585, z=-13.1330, r=180.0000 max forward kinematics pose
+
 J1MIN = -90
 J1MAX = 90
 J2MIN = 0

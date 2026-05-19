@@ -34,7 +34,6 @@ setup(
             "joint_ptp_node = dobot.joint_ptp_node:main",
             "cartesian_ptp_node = dobot.cartesian_ptp_node:main",
             "pick_and_place_node = dobot.pick_and_place_node:main",
-            "keyboard_node = dobot.keyboard_node:main",
         ],
     },
 )

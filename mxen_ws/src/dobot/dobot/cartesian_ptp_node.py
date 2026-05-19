@@ -103,6 +103,7 @@ class CartesianPTPNode(Node):
 
             if all(error < position_threshold for error in position_error) and all(error < rotation_threshold for error in rotation_error):
                 self.get_logger().info("Goal reached")
+                goal_handle.succeed()
                 result_msg.success = True
                 return result_msg
             
