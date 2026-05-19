@@ -3,7 +3,7 @@ from rclpy.node import Node
 from rclpy.executors import ExternalShutdownException
 from std_srvs.srv import Trigger
 
-from ...dobot_teleop.dobot_teleop.keyboard import Keyboard
+from dobot_teleop.dobot_teleop.keyboard import Keyboard
 from dobot_interface.srv import PickAndPlace
 
 
