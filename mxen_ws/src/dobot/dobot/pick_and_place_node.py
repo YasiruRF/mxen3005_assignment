@@ -24,7 +24,7 @@ class PickAndPlaceNode(Node):
 
     def __init__(self):
         super().__init__("pick_and_place_node")
-        self.dobot = None
+        self.dobot = DobotClient()
 
         self.service = self.create_service(
             PickAndPlace,
@@ -39,7 +39,6 @@ class PickAndPlaceNode(Node):
         return theta1, theta2, theta3, theta4
     
     def goal_valid(self, x, y, z, r):
-        self.dobot = DobotClient()
         theta1, theta2, theta3, theta4 = self.pose_to_joints(x, y, z, r)
         return self.dobot.is_goal_valid(theta1, theta2, theta3, theta4)
 
@@ -68,7 +67,7 @@ class PickAndPlaceNode(Node):
                 f"pick=({px},{py},{pz},{pr})  place=({dx},{dy},{dz},{dr})"
             )
 
-            self.dobot = DobotClient()
+
 
             self.get_logger().info("Starting")
             self.dobot.set_joint_ptp(0, 0, 0, 0)

@@ -7,14 +7,13 @@ class SuctionCup(Node):
 
     def __init__(self):
         super().__init__("suction_cup_node")
-        self.dobot = None
+        self.dobot = DobotClient()
         self.service = self.create_service(Trigger, "suction_cup", self.service_callback)
         self.suction_enabled = False
         self.get_logger().info("Suction cup service ready")
 
     def service_callback(self, request, response):
         try:
-            self.dobot = DobotClient()
             self.get_logger().info("Received suction cup service request")
             self.suction_enabled = not self.suction_enabled
             self.dobot.set_suction_cup(self.suction_enabled)

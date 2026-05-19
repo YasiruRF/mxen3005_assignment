@@ -8,13 +8,12 @@ class Homingnode(Node):
     
     def __init__ (self):
         super().__init__("homing_node")
-        self.dobot = None
+        self.dobot = DobotClient()
         self.service = self.create_service(Trigger, "homing", self.service_callback)
         self.get_logger().info("Homing service ready")
 
     def service_callback(self, request, response):
         try:
-            self.dobot = DobotClient()
             self.get_logger().info("Starting homing procedure")
             self.dobot.start_homing()
             response.success = True

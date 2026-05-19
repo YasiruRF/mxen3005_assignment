@@ -14,7 +14,7 @@ class JointStateAction(Node):
 
     def __init__(self):
         super().__init__("joint_state_node")
-        self.dobot = None
+        self.dobot = DobotClient()
         self.publisher = self.create_publisher(JointState, "joint_state", 10)
         self.pose_publisher = self.create_publisher(Pose, "pose", 10)
         timer_period = 0.2  # 5 Hz
@@ -40,7 +40,6 @@ class JointStateAction(Node):
         pose_msg = Pose()
 
         try:
-            self.dobot = DobotClient()
             j1, j2, j3, j4 = self.dobot.get_joint_state()
             msg.position = [j1, j2, j3, j4]
             self.publisher.publish(msg)

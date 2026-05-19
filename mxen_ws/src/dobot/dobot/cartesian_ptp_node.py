@@ -14,7 +14,7 @@ class CartesianPTPNode(Node):
         super().__init__('cartesian_ptp_node')
         self.goal_handle = None
         self.goal_lock = threading.Lock()
-        self.dobot = None
+        self.dobot = DobotClient()
 
         self.action_server = ActionServer(
             self,
@@ -32,7 +32,6 @@ class CartesianPTPNode(Node):
         super().destroy_node()
 
     def goal_callback(self, goal_request):
-        self.dobot = DobotClient()
         self.get_logger().info("Received goal request")
         x , y, z, r = goal_request.pose_goal
         theta1, theta2, theta3, theta4 = inverse_kinematics(x, y, z, r)
@@ -44,7 +43,6 @@ class CartesianPTPNode(Node):
             return GoalResponse.REJECT
         
     def handle_accepted_callback(self, goal_handle):
-        self.dobot = DobotClient()
         with self.goal_lock:
             if self.goal_handle is not None and self.goal_handle.is_active:
                 self.get_logger().info("Canceling previous goal")
@@ -55,13 +53,11 @@ class CartesianPTPNode(Node):
         goal_handle.execute()
 
     def cancel_callback(self, goal_handle):
-        self.dobot = DobotClient()
         self.dobot.stop_current_action()
         self.get_logger().info("Goal canceled")
         return CancelResponse.ACCEPT
     
     def execute_callback(self, goal_handle):
-        self.dobot = DobotClient()
         self.get_logger().info("Executing goal")
 
         goal_msg = goal_handle.request.pose_goal
