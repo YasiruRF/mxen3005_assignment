@@ -33,7 +33,7 @@ import time
 # ──────────────────────────────────────────────────────────────────────────────
 J1MIN, J1MAX = -90.0,  90.0
 J2MIN, J2MAX =   0.0,  70.0
-J3MIN, J3MAX = -20.0,  50.0
+J3MIN, J3MAX = -20.0,  60.0
 J4MIN, J4MAX = -90.0,  90.0
 
 LIMITS = [(J1MIN, J1MAX), (J2MIN, J2MAX), (J3MIN, J3MAX), (J4MIN, J4MAX)]

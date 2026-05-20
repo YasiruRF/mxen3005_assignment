@@ -66,7 +66,7 @@ class TeleopControlNode(Node):
         self.J2MAX = 70.0
 
         self.J3MIN = -15.0
-        self.J3MAX = 40.0
+        self.J3MAX = 60.0
 
         self.J4MIN = -90.0
         self.J4MAX = 90.0

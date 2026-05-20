@@ -20,7 +20,7 @@
   <xacro:property name="J2MIN" value="0" />
   <xacro:property name="J2MAX" value="${(70*pi)/180}" />
   <xacro:property name="J3MIN" value="${(-15*pi)/180}" />
-  <xacro:property name="J3MAX" value="${(40*pi)/180}" />
+  <xacro:property name="J3MAX" value="${(60*pi)/180}" />
   <xacro:property name="J4MIN" value="${-pi/2}" />
   <xacro:property name="J4MAX" value="${pi/2}" />
 

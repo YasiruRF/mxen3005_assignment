@@ -104,48 +104,86 @@ class PickAndPlaceNode(Node):
             self.dobot.set_joint_ptp(0, 0, 0, 0)
             time.sleep(0.5)
 
+            blocks_completed = 0
+
             # ── Block 1 ──
-            self.pick (*P1, "P1")
-            self.place(*D1, "D1 - bottom layer")
+            try:
+                self.pick (*P1, "P1")
+                self.place(*D1, "D1 - bottom layer")
+                blocks_completed += 1
+            except ValueError as e:
+                self.get_logger().warning(f"Block 1 skipped: {str(e)}")
 
             # ── Block 2 ──
-            self.pick (*P2, "P2")
-            self.place(*D2, "D2 - bottom layer")
+            try:
+                self.pick (*P2, "P2")
+                self.place(*D2, "D2 - bottom layer")
+                blocks_completed += 1
+            except ValueError as e:
+                self.get_logger().warning(f"Block 2 skipped: {str(e)}")
 
             # ── Block 3 ──
-            self.pick (*P3, "P3")
-            self.place(*D3, "D3 - bottom layer")
+            try:
+                self.pick (*P3, "P3")
+                self.place(*D3, "D3 - bottom layer")
+                blocks_completed += 1
+            except ValueError as e:
+                self.get_logger().warning(f"Block 3 skipped: {str(e)}")
 
             # ── Block 4 ──
-            self.pick (*P4, "P4")
-            self.place(*D4, "D4 - bottom layer")
+            try:
+                self.pick (*P4, "P4")
+                self.place(*D4, "D4 - bottom layer")
+                blocks_completed += 1
+            except ValueError as e:
+                self.get_logger().warning(f"Block 4 skipped: {str(e)}")
 
             # ── Block 5 ──
-            self.pick (*P5, "P5")
-            self.place(*D5, "D5 - middle layer")
+            try:
+                self.pick (*P5, "P5")
+                self.place(*D5, "D5 - middle layer")
+                blocks_completed += 1
+            except ValueError as e:
+                self.get_logger().warning(f"Block 5 skipped: {str(e)}")
 
             # ── Block 6 ──
-            self.pick (*P6, "P6")
-            self.place(*D6, "D6 - middle layer")
+            try:
+                self.pick (*P6, "P6")
+                self.place(*D6, "D6 - middle layer")
+                blocks_completed += 1
+            except ValueError as e:
+                self.get_logger().warning(f"Block 6 skipped: {str(e)}")
 
             # ── Block 7 ──
-            self.pick (*P7, "P7")
-            self.place(*D7, "D7 - middle layer")
+            try:
+                self.pick (*P7, "P7")
+                self.place(*D7, "D7 - middle layer")
+                blocks_completed += 1
+            except ValueError as e:
+                self.get_logger().warning(f"Block 7 skipped: {str(e)}")
 
             # ── Block 8 ──
-            self.pick (*P8, "P8")
-            self.place(*D8, "D8 - top layer")
+            try:
+                self.pick (*P8, "P8")
+                self.place(*D8, "D8 - top layer")
+                blocks_completed += 1
+            except ValueError as e:
+                self.get_logger().warning(f"Block 8 skipped: {str(e)}")
 
             # ── Block 9 ──
-            self.pick (*P9, "P9")
-            self.place(*D9, "D9 - top layer")
+            try:
+                self.pick (*P9, "P9")
+                self.place(*D9, "D9 - top layer")
+                blocks_completed += 1
+            except ValueError as e:
+                self.get_logger().warning(f"Block 9 skipped: {str(e)}")
 
             # Return home
             self.get_logger().info("Done! Returning home.")
             self.dobot.set_joint_ptp(0, 0, 0, 0)
 
             response.success = True
-            response.message = "Pyramid built: 4 + 3 + 2 blocks."
+            response.message = f"Pyramid building complete: {blocks_completed}/9 blocks placed."
 
         except Exception as e:
             response.success = False
