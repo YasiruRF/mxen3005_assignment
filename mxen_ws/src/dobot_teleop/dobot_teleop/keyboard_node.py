@@ -1,9 +1,40 @@
 import rclpy
 from rclpy.node import Node
+
 from std_msgs.msg import String
+
 from dobot_teleop.keyboard import Keyboard
 
+
 class KeyboardTeleopNode(Node):
+
+    KEYBOARD_ENABLE_KEY = ("KEY_8", 1)
+
+    MOMENTARY_COMMANDS = {
+        ("KEY_W", 1): "W_DOWN",
+        ("KEY_W", 0): "W_UP",
+        ("KEY_S", 1): "S_DOWN",
+        ("KEY_S", 0): "S_UP",
+        ("KEY_A", 1): "A_DOWN",
+        ("KEY_A", 0): "A_UP",
+        ("KEY_D", 1): "D_DOWN",
+        ("KEY_D", 0): "D_UP",
+        ("KEY_UP", 1): "UP_DOWN",
+        ("KEY_UP", 0): "UP_UP",
+        ("KEY_DOWN", 1): "DOWN_DOWN",
+        ("KEY_DOWN", 0): "DOWN_UP",
+        ("KEY_LEFT", 1): "LEFT_DOWN",
+        ("KEY_LEFT", 0): "LEFT_UP",
+        ("KEY_RIGHT", 1): "RIGHT_DOWN",
+        ("KEY_RIGHT", 0): "RIGHT_UP",
+    }
+
+    TOGGLE_COMMANDS = {
+        "KEY_E": "SUCTION_TOGGLE",
+        "KEY_H": "HOME",
+        "KEY_M": "MODE_TOGGLE",
+        "KEY_P": "AUTO_STACK",
+    }
 
     def __init__(self):
         super().__init__("keyboard_node")
@@ -13,124 +44,53 @@ class KeyboardTeleopNode(Node):
         self.publisher = self.create_publisher(
             String,
             "/keyboard",
-            10
+            10,
         )
         self.keyboard_enabled = False
-        self.toggle_keys_pressed = set()  # Track which toggle keys are currently pressed
-        self.timer = self.create_timer(0.05,self.timer_callback)
+        self.toggle_keys_pressed = set()
+        self.timer = self.create_timer(0.05, self.timer_callback)
+
+        self.get_logger().info(
+            "Keyboard controls: 8 enable/disable, W/S/A/D and arrows move, "
+            "M toggles mode, H homes, E toggles suction, P runs auto stack"
+        )
 
     def timer_callback(self):
         key = self.kb.read_key()
         if key == (None, None):
             return
 
-        if key == ('KEY_8', 1):
+        if key == self.KEYBOARD_ENABLE_KEY:
             self.keyboard_enabled = not self.keyboard_enabled
-
             self.get_logger().info(
-                f"Keyboard enabled: {self.keyboard_enabled}")
+                f"Keyboard enabled: {self.keyboard_enabled}"
+            )
             return
+
         if not self.keyboard_enabled:
             return
 
+        if key in self.MOMENTARY_COMMANDS:
+            self.publish_command(self.MOMENTARY_COMMANDS[key])
+            return
+
+        keycode, keystate = key
+
+        if keycode in self.TOGGLE_COMMANDS:
+            if keystate == 1:
+                if keycode in self.toggle_keys_pressed:
+                    return
+
+                self.toggle_keys_pressed.add(keycode)
+                self.publish_command(self.TOGGLE_COMMANDS[keycode])
+                return
+
+            if keystate == 0:
+                self.toggle_keys_pressed.discard(keycode)
+
+    def publish_command(self, command):
         msg = String()
-
-      
-        if key == ('KEY_W', 1):
-            msg.data = "W_DOWN"
-       
-        elif key == ('KEY_W', 0):
-            msg.data = "W_UP"
-
-        elif key == ('KEY_S', 1):
-            msg.data = "S_DOWN"
-
-        elif key == ('KEY_S', 0):
-            msg.data = "S_UP"     
-
-        elif key == ('KEY_A', 1):
-            msg.data = "A_DOWN"
-
-        elif key == ('KEY_A', 0):
-            msg.data = "A_UP"
-
-        elif key == ('KEY_D', 1):
-            msg.data = "D_DOWN"
-
-        elif key == ('KEY_D', 0):
-            msg.data = "D_UP"  
-
-        elif key == ('KEY_UP', 1):
-            msg.data = "UP_DOWN"
-
-        elif key == ('KEY_UP', 0):
-            msg.data = "UP_UP"
-
-        elif key == ('KEY_DOWN', 1):
-            msg.data = "DOWN_DOWN"
-
-        elif key == ('KEY_DOWN', 0):
-            msg.data = "DOWN_UP"
-
-        elif key == ('KEY_LEFT', 1):
-            msg.data = "LEFT_DOWN"
-
-        elif key == ('KEY_LEFT', 0):
-            msg.data = "LEFT_UP"
-
-        elif key == ('KEY_RIGHT', 1):
-            msg.data = "RIGHT_DOWN"
-
-        elif key == ('KEY_RIGHT', 0):
-            msg.data = "RIGHT_UP"
-
-        elif key == ('KEY_E', 1):
-            if 'KEY_E' not in self.toggle_keys_pressed:
-                msg.data = "SUCTION_TOGGLE"
-                self.toggle_keys_pressed.add('KEY_E')
-            else:
-                return
-
-        elif key == ('KEY_E', 0):
-            self.toggle_keys_pressed.discard('KEY_E')
-            return
-
-        elif key == ('KEY_H', 1):
-            if 'KEY_H' not in self.toggle_keys_pressed:
-                msg.data = "HOME"
-                self.toggle_keys_pressed.add('KEY_H')
-            else:
-                return
-
-        elif key == ('KEY_H', 0):
-            self.toggle_keys_pressed.discard('KEY_H')
-            return
-
-        elif key == ('KEY_M', 1):
-            if 'KEY_M' not in self.toggle_keys_pressed:
-                msg.data = "MODE_TOGGLE"
-                self.toggle_keys_pressed.add('KEY_M')
-            else:
-                return
-
-        elif key == ('KEY_M', 0):
-            self.toggle_keys_pressed.discard('KEY_M')
-            return
-
-        elif key == ('KEY_P', 1):
-            if 'KEY_P' not in self.toggle_keys_pressed:
-                msg.data = "AUTO_STACK"
-                self.toggle_keys_pressed.add('KEY_P')
-            else:
-                return
-
-        elif key == ('KEY_P', 0):
-            self.toggle_keys_pressed.discard('KEY_P')
-            return
-
-        else:
-            return
-
+        msg.data = command
         self.publisher.publish(msg)
         self.get_logger().info(f"Published: {msg.data}")
 

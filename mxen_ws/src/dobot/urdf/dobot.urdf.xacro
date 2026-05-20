@@ -11,18 +11,18 @@
   <xacro:property name="L3radius" value="0.02" />
   <xacro:property name="L4" value="0.06" />
   <xacro:property name="L4size" value="0.008" />
-  <xacro:property name="DEG2RAD" value="${pi/180}" />
-  <xacro:property name="J1MIN" value="-90" />
-  <xacro:property name="J1MAX" value="90" />
-  <xacro:property name="J2MIN" value="0" />
-  <xacro:property name="J2MAX" value="70" />
-  <xacro:property name="J3MIN" value="-15" />
-  <xacro:property name="J3MAX" value="40" />
-  <xacro:property name="J4MIN" value="-90" />
-  <xacro:property name="J4MAX" value="90" />
   <xacro:property name="L5" value="0.07" />
   <xacro:property name="L5size" value="0.008" />
   <xacro:property name="eesize" value="0.02" />
+  
+  <xacro:property name="J1MIN" value="${-pi/2}" />
+  <xacro:property name="J1MAX" value="${pi/2}" />
+  <xacro:property name="J2MIN" value="0" />
+  <xacro:property name="J2MAX" value="${(70*pi)/180}" />
+  <xacro:property name="J3MIN" value="${(-15*pi)/180}" />
+  <xacro:property name="J3MAX" value="${(40*pi)/180}" />
+  <xacro:property name="J4MIN" value="${-pi/2}" />
+  <xacro:property name="J4MAX" value="${pi/2}" />
 
   <material name="white">
     <color rgba="0.95 0.95 0.95 1" />
@@ -76,7 +76,7 @@
     <child link="link1" />
     <origin xyz="0 0 ${L0}" rpy="0 0 0" />
     <axis xyz="0 0 1" />
-    <limit lower="${J1MIN*DEG2RAD}" upper="${J1MAX*DEG2RAD}" effort="1" velocity="1" />
+    <limit lower="${J1MIN}" upper="${J1MAX}" effort="1" velocity="1" />
   </joint>
   
   <link name="link1">
@@ -94,12 +94,12 @@
     <child link="link2" />
     <origin xyz="0 0 ${L1}" rpy="0 0 0" />
     <axis xyz="0 1 0" />
-    <limit lower="${J2MIN*DEG2RAD}" upper="${J2MAX*DEG2RAD}" effort="1" velocity="0.5" />
+    <limit lower="${J2MIN}" upper="${J2MAX}" effort="1" velocity="0.5" />
   </joint>
 
   <link name="link2">
     <visual name="link2">
-      <origin xyz="0 0 ${L2/2}" rpy="0 0 ${90*DEG2RAD}" />
+      <origin xyz="0 0 ${L2/2}" rpy="0 0 ${pi/2}" />
       <geometry>
         <cylinder radius="${L2radius}" length="${L2}" />
       </geometry>
@@ -115,7 +115,7 @@
 
   <link name="middle_link">
     <visual>
-      <origin xyz="0 0 0" rpy="${90*DEG2RAD} 0 0" />
+      <origin xyz="0 0 0" rpy="${pi/2} 0 0" />
       <geometry><cylinder radius="${L2radius}" length="0.03" /></geometry>
       <material name="dark_gray" />
     </visual>
@@ -126,12 +126,12 @@
     <child link="link3" />
     <origin xyz="0 0 ${L2}" rpy="0 0 0" />
     <axis xyz="0 1 0" />
-    <limit lower="${J3MIN*DEG2RAD}" upper="${J3MAX*DEG2RAD}" effort="1" velocity="1" />
+    <limit lower="${J3MIN}" upper="${J3MAX}" effort="1" velocity="1" />
   </joint>
 
   <link name="link3">
     <visual name="link3">
-      <origin xyz="${L3/2} 0 0" rpy="${90*DEG2RAD} 0 0" />
+      <origin xyz="${L3/2} 0 0" rpy="${pi/2} 0 0" />
       <geometry>
         <box size="${L3} ${L3radius} ${L3radius}" />
       </geometry>
@@ -146,7 +146,7 @@
     <child link="mimic"/>
     <origin xyz="${L3} 0 0" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
-    <limit lower="${-180*DEG2RAD}" upper="${180*DEG2RAD}" effort="1" velocity="1"/>
+    <limit lower="${-pi}" upper="${pi}" effort="1" velocity="1"/>
     <mimic joint="joint2" multiplier="-1.0" offset="0.0"/>
   </joint>
 
@@ -155,13 +155,13 @@
     <child link="link4"/>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
-    <limit lower="${-180*DEG2RAD}" upper="${180*DEG2RAD}" effort="1" velocity="1.0"/>
+    <limit lower="${-pi}" upper="${pi}" effort="1" velocity="1.0"/>
     <mimic joint="joint3" multiplier="-1.0" offset="0.0"/>
   </joint>
 
   <link name="link4">
     <visual name="link4">
-      <origin xyz="${L4/2} 0 0" rpy="${90*DEG2RAD} 0 0"/>
+      <origin xyz="${L4/2} 0 0" rpy="${pi/2} 0 0"/>
       <geometry>
         <box size="${L4} ${L4size} ${L4size}" />
       </geometry>
@@ -190,12 +190,12 @@
     <child link="link5" />
     <origin xyz="${L4} 0 0" rpy="0 0 0" />
     <axis xyz="0 0 1" />
-    <limit lower="${J1MIN*DEG2RAD}" upper="${J1MAX*DEG2RAD}" effort="1" velocity="0.5" />
+    <limit lower="${J1MIN}" upper="${J1MAX}" effort="1" velocity="0.5" />
   </joint>
 
   <link name="link5">
     <visual name="link5">
-      <origin xyz="0 0 ${-L5/2}" rpy="0 ${90*DEG2RAD} 0"/>
+      <origin xyz="0 0 ${-L5/2}" rpy="0 ${pi/2} 0"/>
       <geometry>
         <box size="${L5} ${L5size} ${L5size}" />
       </geometry>
@@ -215,7 +215,7 @@
       <geometry>
         <box size="${eesize} ${eesize} ${eesize}" />
       </geometry>
-      <material name="dark_gray" />
+      <material name="yellow" />
     </visual>
   </link>
 

@@ -6,7 +6,7 @@
 	</node>
 
 	<node pkg="joint_state_publisher" exec="joint_state_publisher">
-		<param name="source_list" value="['joint_state']"/>
+		<param name="source_list" value="['joint_state_radians']"/>
 	</node>
 
 	<node pkg="rviz2" exec="rviz2"/>

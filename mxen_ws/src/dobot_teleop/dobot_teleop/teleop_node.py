@@ -17,6 +17,17 @@ from dobot_interface.srv import PickAndPlace
 
 class TeleopControlNode(Node):
 
+    JOINT_KEYS = {
+        "LEFT_DOWN",
+        "RIGHT_DOWN",
+        "UP_DOWN",
+        "DOWN_DOWN",
+        "W_DOWN",
+        "S_DOWN",
+        "A_DOWN",
+        "D_DOWN",
+    }
+
     def __init__(self):
 
         super().__init__("teleop_node")
@@ -43,6 +54,9 @@ class TeleopControlNode(Node):
 
         # Prevent duplicate commands while key held
         self.key_active = set()
+
+        self.active_joint_goal_handle = None
+        self.pending_joint_cancel = False
 
         # Joint limits
         self.J1MIN = -90.0
@@ -242,6 +256,7 @@ class TeleopControlNode(Node):
             self.key_active.add(key)
 
             if self.mode == "joint":
+                self.cancel_joint_motion()
                 self.handle_joint_key_down(key)
 
             elif self.mode == "cartesian":
@@ -262,7 +277,10 @@ class TeleopControlNode(Node):
                 down_key
             )
 
-            self.stop_motion()
+            if down_key in self.JOINT_KEYS:
+                self.cancel_joint_motion()
+            else:
+                self.stop_motion()
 
     # =========================================================
     # JOINT MODE
@@ -448,6 +466,21 @@ class TeleopControlNode(Node):
 
         self.dobot.stop_current_action()
 
+    def cancel_joint_motion(self):
+
+        if self.active_joint_goal_handle is None:
+            self.pending_joint_cancel = True
+            return
+
+        self.get_logger().info(
+            "Canceling active joint goal"
+        )
+
+        goal_handle = self.active_joint_goal_handle
+        self.active_joint_goal_handle = None
+        self.pending_joint_cancel = False
+        goal_handle.cancel_goal_async()
+
     # =========================================================
     # ACTIONS
     # =========================================================
@@ -474,9 +507,41 @@ class TeleopControlNode(Node):
             f"{goal_msg.joint_goal}"
         )
 
-        self.joint_client.send_goal_async(
+        self.pending_joint_cancel = False
+        future = self.joint_client.send_goal_async(
             goal_msg
         )
+        future.add_done_callback(self.joint_goal_response_callback)
+
+    def joint_goal_response_callback(self, future):
+
+        goal_handle = future.result()
+
+        if not goal_handle.accepted:
+            self.get_logger().warn(
+                "Joint goal was rejected"
+            )
+            return
+
+        self.active_joint_goal_handle = goal_handle
+        goal_handle.get_result_async().add_done_callback(
+            lambda future, handle=goal_handle: self.joint_goal_result_callback(
+                future,
+                handle,
+            )
+        )
+
+        if self.pending_joint_cancel:
+            self.get_logger().info(
+                "Joint goal accepted after release; canceling immediately"
+            )
+            self.pending_joint_cancel = False
+            self.cancel_joint_motion()
+
+    def joint_goal_result_callback(self, future, goal_handle):
+
+        if self.active_joint_goal_handle == goal_handle:
+            self.active_joint_goal_handle = None
 
     def send_cartesian_goal(
         self,

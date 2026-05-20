@@ -16,6 +16,8 @@ class JointStateAction(Node):
         super().__init__("joint_state_node")
         self.dobot = DobotClient()
         self.publisher = self.create_publisher(JointState, "joint_state", 10)
+        # Additional publisher for visualization tools which expect radians
+        self.radian_publisher = self.create_publisher(JointState, "joint_state_radians", 10)
         self.pose_publisher = self.create_publisher(Pose, "pose", 10)
         timer_period = 0.2  # 5 Hz
         self.timer = self.create_timer(timer_period, self.timer_callback)
@@ -43,6 +45,12 @@ class JointStateAction(Node):
             j1, j2, j3, j4 = self.dobot.get_joint_state()
             msg.position = [j1, j2, j3, j4]
             self.publisher.publish(msg)
+            # Publish same joint state in radians for visualization (RViz expects radians)
+            rad_msg = JointState()
+            rad_msg.header = msg.header
+            rad_msg.name = msg.name
+            rad_msg.position = [math.radians(v) for v in msg.position]
+            self.radian_publisher.publish(rad_msg)
             x, y, z, r = forward_kinematics(j1, j2, j3, j4)
             pose_msg.position.x = x
             pose_msg.position.y = y
