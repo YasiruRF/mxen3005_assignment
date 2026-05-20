@@ -256,7 +256,6 @@ class TeleopControlNode(Node):
             self.key_active.add(key)
 
             if self.mode == "joint":
-                self.cancel_joint_motion()
                 self.handle_joint_key_down(key)
 
             elif self.mode == "cartesian":
@@ -277,11 +276,6 @@ class TeleopControlNode(Node):
                 down_key
             )
 
-            if down_key in self.JOINT_KEYS:
-                self.cancel_joint_motion()
-            else:
-                self.stop_motion()
-
     # =========================================================
     # JOINT MODE
     # =========================================================
@@ -291,82 +285,47 @@ class TeleopControlNode(Node):
         j1, j2, j3, j4 = (
             self.current_joints
         )
+        # Use incremental joint steps instead of jumping to limits
+        step = 10.0  # degrees per key press
 
-        # J1
+        def clamp(val, mn, mx):
+            return max(mn, min(mx, val))
+
+        # J1 (base rotation)
         if key == "LEFT_DOWN":
-
-            self.send_joint_goal(
-                self.J1MIN,
-                j2,
-                j3,
-                j4
-            )
+            new_j1 = clamp(j1 - step, self.J1MIN, self.J1MAX)
+            self.send_joint_goal(new_j1, j2, j3, j4)
 
         elif key == "RIGHT_DOWN":
+            new_j1 = clamp(j1 + step, self.J1MIN, self.J1MAX)
+            self.send_joint_goal(new_j1, j2, j3, j4)
 
-            self.send_joint_goal(
-                self.J1MAX,
-                j2,
-                j3,
-                j4
-            )
-
-        # J2
+        # J2 (shoulder)
         elif key == "UP_DOWN":
-
-            self.send_joint_goal(
-                j1,
-                self.J2MAX,
-                j3,
-                j4
-            )
+            new_j2 = clamp(j2 + step, self.J2MIN, self.J2MAX)
+            self.send_joint_goal(j1, new_j2, j3, j4)
 
         elif key == "DOWN_DOWN":
+            new_j2 = clamp(j2 - step, self.J2MIN, self.J2MAX)
+            self.send_joint_goal(j1, new_j2, j3, j4)
 
-            self.send_joint_goal(
-                j1,
-                self.J2MIN,
-                j3,
-                j4
-            )
-
-        # J3
+        # J3 (elbow)
         elif key == "W_DOWN":
-
-            self.send_joint_goal(
-                j1,
-                j2,
-                self.J3MAX,
-                j4
-            )
+            new_j3 = clamp(j3 + step, self.J3MIN, self.J3MAX)
+            self.send_joint_goal(j1, j2, new_j3, j4)
 
         elif key == "S_DOWN":
+            new_j3 = clamp(j3 - step, self.J3MIN, self.J3MAX)
+            self.send_joint_goal(j1, j2, new_j3, j4)
 
-            self.send_joint_goal(
-                j1,
-                j2,
-                self.J3MIN,
-                j4
-            )
-
-        # J4
+        # J4 (wrist)
         elif key == "A_DOWN":
-
-            self.send_joint_goal(
-                j1,
-                j2,
-                j3,
-                self.J4MIN
-            )
+            new_j4 = clamp(j4 - step, self.J4MIN, self.J4MAX)
+            self.send_joint_goal(j1, j2, j3, new_j4)
 
         elif key == "D_DOWN":
-
-            self.send_joint_goal(
-                j1,
-                j2,
-                j3,
-                self.J4MAX
-            )
+            new_j4 = clamp(j4 + step, self.J4MIN, self.J4MAX)
+            self.send_joint_goal(j1, j2, j3, new_j4)
 
     # =========================================================
     # CARTESIAN MODE
@@ -377,109 +336,62 @@ class TeleopControlNode(Node):
         x, y, z, r = (
             self.current_pose
         )
+        
+        # Use incremental steps for Cartesian control (relative moves in base frame)
+        step_xyz = 50.0  # mm per key press
+        step_r = 5.0     # degrees per key press
 
-        # X
+        def clamp(val, mn, mx):
+            return max(mn, min(mx, val))
+
+        # X (forward/back)
         if key == "UP_DOWN":
-
-            self.send_cartesian_goal(
-                self.X_MAX,
-                y,
-                z,
-                r
-            )
+            new_x = clamp(x + step_xyz, self.X_MIN, self.X_MAX)
+            self.send_cartesian_goal(new_x, y, z, r)
 
         elif key == "DOWN_DOWN":
+            new_x = clamp(x - step_xyz, self.X_MIN, self.X_MAX)
+            self.send_cartesian_goal(new_x, y, z, r)
 
-            self.send_cartesian_goal(
-                self.X_MIN,
-                y,
-                z,
-                r
-            )
-
-        # Y
+        # Y (left/right)
         elif key == "LEFT_DOWN":
-
-            self.send_cartesian_goal(
-                x,
-                self.Y_MAX,
-                z,
-                r
-            )
+            new_y = clamp(y + step_xyz, self.Y_MIN, self.Y_MAX)
+            self.send_cartesian_goal(x, new_y, z, r)
 
         elif key == "RIGHT_DOWN":
+            new_y = clamp(y - step_xyz, self.Y_MIN, self.Y_MAX)
+            self.send_cartesian_goal(x, new_y, z, r)
 
-            self.send_cartesian_goal(
-                x,
-                self.Y_MIN,
-                z,
-                r
-            )
-
-        # Z
+        # Z (up/down)
         elif key == "W_DOWN":
-
-            self.send_cartesian_goal(
-                x,
-                y,
-                self.Z_MAX,
-                r
-            )
+            new_z = clamp(z + step_xyz, self.Z_MIN, self.Z_MAX)
+            self.send_cartesian_goal(x, y, new_z, r)
 
         elif key == "S_DOWN":
+            new_z = clamp(z - step_xyz, self.Z_MIN, self.Z_MAX)
+            self.send_cartesian_goal(x, y, new_z, r)
 
-            self.send_cartesian_goal(
-                x,
-                y,
-                self.Z_MIN,
-                r
-            )
-
-        # R
+        # R (rotation)
         elif key == "A_DOWN":
-
-            self.send_cartesian_goal(
-                x,
-                y,
-                z,
-                self.R_MIN
-            )
+            new_r = clamp(r - step_r, self.R_MIN, self.R_MAX)
+            self.send_cartesian_goal(x, y, z, new_r)
 
         elif key == "D_DOWN":
-
-            self.send_cartesian_goal(
-                x,
-                y,
-                z,
-                self.R_MAX
-            )
+            new_r = clamp(r + step_r, self.R_MIN, self.R_MAX)
+            self.send_cartesian_goal(x, y, z, new_r)
 
     # =========================================================
     # STOP MOTION
     # =========================================================
 
     def stop_motion(self):
-
-        self.get_logger().info(
-            "Stopping motion"
-        )
-
-        self.dobot.stop_current_action()
+        # Disabled to prevent crashes on rapid keypresses
+        pass
 
     def cancel_joint_motion(self):
-
-        if self.active_joint_goal_handle is None:
-            self.pending_joint_cancel = True
-            return
-
-        self.get_logger().info(
-            "Canceling active joint goal"
-        )
-
-        goal_handle = self.active_joint_goal_handle
-        self.active_joint_goal_handle = None
-        self.pending_joint_cancel = False
-        goal_handle.cancel_goal_async()
+        # Disabled to prevent crashes on rapid keypresses
+        # Let action servers handle goal management internally
+        pass
 
     # =========================================================
     # ACTIONS
@@ -565,6 +477,7 @@ class TeleopControlNode(Node):
             f"{goal_msg.pose_goal}"
         )
 
+        # Just send the goal and let action server handle preemption naturally
         self.cartesian_client.send_goal_async(
             goal_msg
         )

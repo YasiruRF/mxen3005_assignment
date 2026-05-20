@@ -6,7 +6,7 @@ from rclpy.node import Node
 from geometry_msgs.msg import Pose
 from sensor_msgs.msg import JointState
 
-from .dobot_client import DobotClient, DobotClient
+from .dobot_client import DobotClient
 from .dobot_kinematics import forward_kinematics
 
 
@@ -14,7 +14,11 @@ class JointStateAction(Node):
 
     def __init__(self):
         super().__init__("joint_state_node")
-        self.dobot = DobotClient()
+        try:
+            self.dobot = DobotClient()
+        except SystemExit:
+            self.get_logger().error("Failed to connect to Dobot on init; will retry in timer")
+            self.dobot = None
         self.publisher = self.create_publisher(JointState, "joint_state", 10)
         # Additional publisher for visualization tools which expect radians
         self.radian_publisher = self.create_publisher(JointState, "joint_state_radians", 10)
@@ -42,6 +46,15 @@ class JointStateAction(Node):
         pose_msg = Pose()
 
         try:
+            # Attempt to (re)connect if needed
+            if self.dobot is None:
+                try:
+                    self.dobot = DobotClient()
+                    self.get_logger().info("Reconnected to Dobot")
+                except Exception as e:
+                    self.get_logger().error(f"Can't connect to dobot: {e}")
+                    raise
+
             j1, j2, j3, j4 = self.dobot.get_joint_state()
             msg.position = [j1, j2, j3, j4]
             self.publisher.publish(msg)
