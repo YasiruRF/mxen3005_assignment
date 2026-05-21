@@ -5,16 +5,16 @@ from .dobot_kinematics import inverse_kinematics
 from dobot_interface.srv import PickAndPlace
 import time
 
-CLEARANCE_Z = 200.0
+CLEARANCE_Z = 100.0
 
 # ─────────────────────────────────────────────
 #  MOVE TIMING  – tweak these if robot stops mid-air
 # ─────────────────────────────────────────────
 SLEEP_LONG_MOVE  = 5.0   # after large XY travel (pick↔place)
-SLEEP_SHORT_MOVE = 2.5   # after small vertical move (above↔pick/place z)
-SLEEP_SUCTION_ON = 1.0   # wait for suction to grip
-SLEEP_SUCTION_OFF= 1.0   # wait for suction to release
-SLEEP_SETTLE     = 1.0   # wait after descending before releasing block
+SLEEP_SHORT_MOVE = 2.0   # after small vertical move (above↔pick/place z)
+SLEEP_SUCTION_ON = 2.0   # wait for suction to grip
+SLEEP_SUCTION_OFF= 2.0  # wait for suction to release
+SLEEP_SETTLE     = 2.0   # wait after descending before releasing block
 
 # ─────────────────────────────────────────────
 #  GRID PICK POSITIONS  (3×3, block=35mm, gap=5mm, step=40mm)
@@ -51,23 +51,23 @@ P9 = (132, -241, 35, 0)
 # ─────────────────────────────────────────────
 
 D1 = (135,   226,  35, 0)
-D2 = (175,   226,  35, 0)
-D3 = (215,   226,  35, 0)
-D4 = (255,   226,  35, 0)
+D2 = (95,   226,  35, 0)
+D3 = ( 55,   226,  35, 0)
+D4 = ( 15,   226,  35, 0)
 
-D5 = (152.5, 226,  70, 0)
-D6 = (192.5, 226,  70, 0)
-D7 = (232.5, 226,  70, 0)
+D5 = (117.5, 226,  70, 0)
+D6 = ( 77.5, 226,  70, 0)
+D7 = ( 37.5, 226,  70, 0)
 
-D8 = (175,   226, 105, 0)
-D9 = (215,   226, 105, 0)
+D8 = (100,   226, 105, 0)
+D9 = ( 60,   226, 105, 0)
 
 
 class PickAndPlaceNode(Node):
 
     def __init__(self):
         super().__init__("pick_and_place_node")
-        self.dobot = DobotClient()
+        self.dobot = None
         self.service = self.create_service(
             PickAndPlace,
             "pick_and_place",
@@ -81,29 +81,34 @@ class PickAndPlaceNode(Node):
         self.get_logger().info(
             f"  → {label} ({x},{y},{z}) | J1={j1:.1f} J2={j2:.1f} J3={j3:.1f} J4={j4:.1f}"
         )
-        if not self.dobot.is_goal_valid(j1, j2, j3, j4):
-            raise ValueError(f"Invalid goal for {label}: ({j1}, {j2}, {j3}, {j4})")
         self.dobot.set_joint_ptp(j1, j2, j3, j4)
         time.sleep(sleep)   # give robot enough time to finish the move
 
     def pick(self, x, y, z, r, name):
+        self.dobot = DobotClient()  # connect to dobot (retry for each pick in case of connection issues)
         self.get_logger().info(f"=== PICK {name} ===")
         self.move_to(x, y, z + CLEARANCE_Z, r, f"{name} above",  SLEEP_SHORT_MOVE) # 1. above pick
-        self.move_to(x, y, z,               r, f"{name} down",   SLEEP_SHORT_MOVE) # 2. descend
+        self.move_to(x, y, z+5,               r, f"{name} down",   SLEEP_SHORT_MOVE) # 2. descend
+        self.move_to(x, y, z-5,             r, f"{name} settle", SLEEP_SHORT_MOVE) #    settle before gripping
         self.dobot.set_suction_cup(True)                                             # 3. grip
-        time.sleep(SLEEP_SUCTION_ON)                                                 #    wait for suction
+        time.sleep(SLEEP_SUCTION_ON)
+        self.move_to(x, y, z, r, f"{name} raise",  SLEEP_SHORT_MOVE) #    wait for suction
         self.move_to(x, y, z + CLEARANCE_Z, r, f"{name} raise",  SLEEP_SHORT_MOVE) # 4. raise
 
     def place(self, x, y, z, r, name):
+        self.dobot = DobotClient()  # connect to dobot (retry for each place in case of connection issues)
         self.get_logger().info(f"=== PLACE {name} ===")
         self.move_to(x, y, z + CLEARANCE_Z, r, f"{name} above",  SLEEP_LONG_MOVE)  # 1. travel to place (long move)
-        self.move_to(x, y, z,               r, f"{name} down",   SLEEP_SHORT_MOVE) # 2. descend
+        self.move_to(x, y, z+5,               r, f"{name} down",   SLEEP_SHORT_MOVE) # 2. descend
+        self.move_to(x,y,z-5,r, f"{name} settle", SLEEP_SHORT_MOVE) #    settle before releasing
         time.sleep(SLEEP_SETTLE)                                                      #    settle before releasing
         self.dobot.set_suction_cup(False)                                             # 3. release
-        time.sleep(SLEEP_SUCTION_OFF)                                                 #    wait for suction off
+        time.sleep(SLEEP_SUCTION_OFF)
+        self.move_to(x, y, z + CLEARANCE_Z, r, f"{name} raise",  SLEEP_SHORT_MOVE) #    wait for suction off
         self.move_to(x, y, z + CLEARANCE_Z, r, f"{name} raise",  SLEEP_SHORT_MOVE) # 4. raise
 
     def service_callback(self, request, response):
+        self.dobot = DobotClient()  # connect to dobot (retry on service call in case of connection issues)
         try:
 
             self.get_logger().info("Homing robot...")
