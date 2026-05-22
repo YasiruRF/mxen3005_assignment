@@ -36,19 +36,9 @@ class TeleopControlNode(Node):
 
         self.mode = "joint"
 
-        self.current_joints = [
-            0.0,
-            0.0,
-            0.0,
-            0.0
-        ]
+        self.current_joints = [0.0, 0.0, 0.0, 0.0]
 
-        self.current_pose = [
-            0.0,
-            0.0,
-            0.0,
-            0.0
-        ]
+        self.current_pose = [0.0, 0.0, 0.0, 0.0]
 
         self.suction_on = False
 
@@ -149,9 +139,6 @@ class TeleopControlNode(Node):
             "Teleop control node started"
         )
 
-    # =========================================================
-    # CALLBACKS
-    # =========================================================
 
     def joint_callback(self, msg):
 
@@ -166,93 +153,47 @@ class TeleopControlNode(Node):
         qz = msg.orientation.z
         qw = msg.orientation.w
 
-        r_rad = (
-            2.0 * math.atan2(qz, qw)
-        )
+        r_rad = ( 2.0 * math.atan2(qz, qw)  )
 
         r_deg = math.degrees(r_rad)
 
-        self.current_pose = [
-            x,
-            y,
-            z,
-            r_deg
-        ]
-
-    # =========================================================
-    # KEYBOARD CALLBACK
-    # =========================================================
+        self.current_pose = [x, y, z, r_deg]
 
     def keyboard_callback(self, msg):
 
         key = msg.data
 
-        # -----------------------------------------------------
-        # MODE TOGGLE
-        # -----------------------------------------------------
-
         if key == "MODE_TOGGLE":
-
             if self.mode == "joint":
                 self.mode = "cartesian"
             else:
                 self.mode = "joint"
-
-            self.get_logger().info(
-                f"Mode switched to: {self.mode}"
-            )
+            self.get_logger().info(f"Mode switched to: {self.mode}")
 
             return
 
-        # -----------------------------------------------------
-        # HOME
-        # -----------------------------------------------------
 
         if key == "HOME":
-
-            self.get_logger().info(
-                "Starting homing"
-            )
-
+            self.get_logger().info("Starting homing")
             self.dobot.start_homing()
 
             return
 
-        # -----------------------------------------------------
-        # SUCTION
-        # -----------------------------------------------------
 
         if key == "SUCTION_TOGGLE":
-
-            self.suction_on = (
-                not self.suction_on
-            )
-
-            self.dobot.set_suction_cup(
-                self.suction_on
-            )
-
-            self.get_logger().info(
-                f"Suction: {self.suction_on}"
-            )
-
+            self.suction_on = (not self.suction_on)
+            self.dobot.set_suction_cup(self.suction_on)
+            self.get_logger().info(f"Suction: {self.suction_on}")
             return
 
         if key == "AUTO_STACK":
-
             self.call_pick_and_place_service()
-
             return
 
-        # =====================================================
-        # KEY DOWN
-        # =====================================================
 
         if key.endswith("_DOWN"):
-
             if key in self.key_active:
                 return
-
             self.key_active.add(key)
 
             if self.mode == "joint":
@@ -261,37 +202,22 @@ class TeleopControlNode(Node):
             elif self.mode == "cartesian":
                 self.handle_cartesian_key_down(key)
 
-        # =====================================================
-        # KEY UP
-        # =====================================================
+
 
         elif key.endswith("_UP"):
 
-            down_key = key.replace(
-                "_UP",
-                "_DOWN"
-            )
+            down_key = key.replace("_UP","_DOWN")
+            self.key_active.discard(down_key)
 
-            self.key_active.discard(
-                down_key
-            )
-
-    # =========================================================
-    # JOINT MODE
-    # =========================================================
 
     def handle_joint_key_down(self, key):
 
-        j1, j2, j3, j4 = (
-            self.current_joints
-        )
-        # Use incremental joint steps instead of jumping to limits
-        step = 10.0  # degrees per key press
+        j1, j2, j3, j4 = (self.current_joints)
+        step = 10.0  
 
         def clamp(val, mn, mx):
             return max(mn, min(mx, val))
 
-        # J1 (base rotation)
         if key == "LEFT_DOWN":
             new_j1 = clamp(j1 - step, self.J1MIN, self.J1MAX)
             self.send_joint_goal(new_j1, j2, j3, j4)
@@ -327,17 +253,11 @@ class TeleopControlNode(Node):
             new_j4 = clamp(j4 + step, self.J4MIN, self.J4MAX)
             self.send_joint_goal(j1, j2, j3, new_j4)
 
-    # =========================================================
-    # CARTESIAN MODE
-    # =========================================================
 
     def handle_cartesian_key_down(self, key):
 
-        x, y, z, r = (
-            self.current_pose
-        )
+        x, y, z, r = (self.current_pose)
         
-        # Use incremental steps for Cartesian control (relative moves in base frame)
         step_xyz = 50.0  # mm per key press
         step_r = 5.0     # degrees per key press
 
@@ -380,49 +300,16 @@ class TeleopControlNode(Node):
             new_r = clamp(r + step_r, self.R_MIN, self.R_MAX)
             self.send_cartesian_goal(x, y, z, new_r)
 
-    # =========================================================
-    # STOP MOTION
-    # =========================================================
 
-    def stop_motion(self):
-        # Disabled to prevent crashes on rapid keypresses
-        pass
-
-    def cancel_joint_motion(self):
-        # Disabled to prevent crashes on rapid keypresses
-        # Let action servers handle goal management internally
-        pass
-
-    # =========================================================
-    # ACTIONS
-    # =========================================================
-
-    def send_joint_goal(
-        self,
-        j1,
-        j2,
-        j3,
-        j4
-    ):
+    def send_joint_goal(self,j1,j2,j3,j4):
 
         goal_msg = JointPTP.Goal()
+        goal_msg.joint_goal = [float(j1),float(j2),float(j3),float(j4)]
 
-        goal_msg.joint_goal = [
-            float(j1),
-            float(j2),
-            float(j3),
-            float(j4)
-        ]
-
-        self.get_logger().info(
-            f"Joint goal: "
-            f"{goal_msg.joint_goal}"
-        )
+        self.get_logger().info(f"Joint goal: "f"{goal_msg.joint_goal}")
 
         self.pending_joint_cancel = False
-        future = self.joint_client.send_goal_async(
-            goal_msg
-        )
+        future = self.joint_client.send_goal_async(goal_msg)
         future.add_done_callback(self.joint_goal_response_callback)
 
     def joint_goal_response_callback(self, future):
@@ -430,9 +317,7 @@ class TeleopControlNode(Node):
         goal_handle = future.result()
 
         if not goal_handle.accepted:
-            self.get_logger().warn(
-                "Joint goal was rejected"
-            )
+            self.get_logger().warn("Joint goal was rejected")
             return
 
         self.active_joint_goal_handle = goal_handle
@@ -444,9 +329,7 @@ class TeleopControlNode(Node):
         )
 
         if self.pending_joint_cancel:
-            self.get_logger().info(
-                "Joint goal accepted after release; canceling immediately"
-            )
+            self.get_logger().info("Joint goal accepted after release; canceling immediately")
             self.pending_joint_cancel = False
             self.cancel_joint_motion()
 
@@ -455,41 +338,23 @@ class TeleopControlNode(Node):
         if self.active_joint_goal_handle == goal_handle:
             self.active_joint_goal_handle = None
 
-    def send_cartesian_goal(
-        self,
-        x,
-        y,
-        z,
-        r
-    ):
+    def send_cartesian_goal(self,x,y,z,r):
 
         goal_msg = PosePTP.Goal()
 
-        goal_msg.pose_goal = [
-            float(x),
-            float(y),
-            float(z),
-            float(r)
-        ]
+        goal_msg.pose_goal = [float(x),float(y),float(z),float(r)]
 
         self.get_logger().info(
             f"Cartesian goal: "
             f"{goal_msg.pose_goal}"
         )
 
-        # Just send the goal and let action server handle preemption naturally
-        self.cartesian_client.send_goal_async(
-            goal_msg
-        )
+        self.cartesian_client.send_goal_async(goal_msg)
 
     def call_pick_and_place_service(self):
 
         if not self.pick_and_place_client.wait_for_service(timeout_sec=0.5):
-
-            self.get_logger().warn(
-                "Pick-and-place service not available"
-            )
-
+            self.get_logger().warn("Pick-and-place service not available")
             return
 
         req = PickAndPlace.Request()
@@ -504,35 +369,17 @@ class TeleopControlNode(Node):
         result = future.result()
 
         if result:
-
-            self.get_logger().info(
-                f"Pick-and-place: {result.message}"
-            )
-
+            self.get_logger().info(f"Pick-and-place: {result.message}")
         else:
+            self.get_logger().warn("Pick-and-place failed")
 
-            self.get_logger().warn(
-                "Pick-and-place failed"
-            )
-
-
-# =============================================================
-# MAIN
-# =============================================================
 
 def main(args=None):
-
     rclpy.init(args=args)
-
     node = TeleopControlNode()
-
     rclpy.spin(node)
-
     node.destroy_node()
-
     rclpy.shutdown()
 
-
 if __name__ == "__main__":
-
     main()
