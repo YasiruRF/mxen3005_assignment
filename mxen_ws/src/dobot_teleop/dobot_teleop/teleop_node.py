@@ -33,18 +33,13 @@ class TeleopControlNode(Node):
         super().__init__("teleop_node")
 
         self.dobot = DobotClient()
-
         self.mode = "joint"
-
         self.current_joints = [0.0, 0.0, 0.0, 0.0]
-
         self.current_pose = [0.0, 0.0, 0.0, 0.0]
-
         self.suction_on = False
 
         # Prevent duplicate commands while key held
         self.key_active = set()
-
         self.active_joint_goal_handle = None
         self.pending_joint_cancel = False
 
@@ -75,73 +70,26 @@ class TeleopControlNode(Node):
         self.R_MAX = 180.0
 
         # Action clients
-        self.joint_client = ActionClient(
-            self,
-            JointPTP,
-            "set_joint_ptp"
-        )
-
-        self.cartesian_client = ActionClient(
-            self,
-            PosePTP,
-            "set_cartesian_ptp"
-        )
-
-        self.pick_and_place_client = self.create_client(
-            PickAndPlace,
-            "pick_and_place"
-        )
-
-        self.get_logger().info(
-            "Waiting for action servers..."
-        )
+        self.joint_client = ActionClient(self,JointPTP,"set_joint_ptp")
+        self.cartesian_client = ActionClient(self,PosePTP,"set_cartesian_ptp")
+        self.pick_and_place_client = self.create_client(PickAndPlace,"pick_and_place")
+        self.get_logger().info("Waiting for action servers...")
 
         self.joint_client.wait_for_server()
         self.cartesian_client.wait_for_server()
 
-        self.get_logger().info(
-            "Action servers connected"
-        )
-
-        self.get_logger().info(
-            "Waiting for pick-and-place service..."
-        )
+        self.get_logger().info("Action servers connected")
+        self.get_logger().info("Waiting for pick-and-place service...")
 
         # Subscribers
-        self.keyboard_subscriber = (
-            self.create_subscription(
-                String,
-                "/keyboard",
-                self.keyboard_callback,
-                10
-            )
-        )
+        self.keyboard_subscriber = (self.create_subscription(String,"/keyboard",self.keyboard_callback,10))
+        self.joint_subscriber = (self.create_subscription(JointState,"joint_state",self.joint_callback,10))
+        self.pose_subscriber = (self.create_subscription(Pose,"pose",self.pose_callback,10))
 
-        self.joint_subscriber = (
-            self.create_subscription(
-                JointState,
-                "joint_state",
-                self.joint_callback,
-                10
-            )
-        )
-
-        self.pose_subscriber = (
-            self.create_subscription(
-                Pose,
-                "pose",
-                self.pose_callback,
-                10
-            )
-        )
-
-        self.get_logger().info(
-            "Teleop control node started"
-        )
+        self.get_logger().info("Teleop control node started")
 
 
     def joint_callback(self, msg):
-
         self.current_joints = list(msg.position)
 
     def pose_callback(self, msg):
@@ -154,31 +102,24 @@ class TeleopControlNode(Node):
         qw = msg.orientation.w
 
         r_rad = ( 2.0 * math.atan2(qz, qw)  )
-
         r_deg = math.degrees(r_rad)
-
         self.current_pose = [x, y, z, r_deg]
 
     def keyboard_callback(self, msg):
 
         key = msg.data
-
         if key == "MODE_TOGGLE":
             if self.mode == "joint":
                 self.mode = "cartesian"
             else:
                 self.mode = "joint"
             self.get_logger().info(f"Mode switched to: {self.mode}")
-
             return
-
 
         if key == "HOME":
             self.get_logger().info("Starting homing")
             self.dobot.start_homing()
-
             return
-
 
         if key == "SUCTION_TOGGLE":
             self.suction_on = (not self.suction_on)
@@ -189,7 +130,6 @@ class TeleopControlNode(Node):
         if key == "AUTO_STACK":
             self.call_pick_and_place_service()
             return
-
 
         if key.endswith("_DOWN"):
             if key in self.key_active:
@@ -202,10 +142,7 @@ class TeleopControlNode(Node):
             elif self.mode == "cartesian":
                 self.handle_cartesian_key_down(key)
 
-
-
         elif key.endswith("_UP"):
-
             down_key = key.replace("_UP","_DOWN")
             self.key_active.discard(down_key)
 
